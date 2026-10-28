@@ -80,6 +80,16 @@ header{display:flex;align-items:center;justify-content:space-between;padding:10p
 .abtn:disabled{cursor:default}
 .expbox{margin-top:11px;padding:10px 12px;border-radius:var(--rs);background:rgba(14,165,233,.07);border-left:3px solid var(--ac);font-size:.81rem;line-height:1.6;color:var(--tx2);display:none}
 .expbox.show{display:block}
+.rptbtn{background:rgba(245,158,11,.12)!important;color:var(--yl)!important;border-color:rgba(245,158,11,.3)!important}
+.rptbtn:hover{background:rgba(245,158,11,.25)!important}
+.rptbtn.rp_{background:rgba(239,68,68,.15)!important;color:var(--rd)!important;border-color:rgba(239,68,68,.3)!important}
+.rmodal{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:999;display:flex;align-items:center;justify-content:center;padding:16px}
+.rmodal-box{background:var(--bgc);border:1px solid var(--bd);border-radius:var(--r);padding:20px;max-width:440px;width:100%}
+.rmodal-box h3{font-size:1rem;font-weight:700;margin-bottom:4px;color:var(--yl)}
+.rmodal-box p{font-size:.78rem;color:var(--tx2);margin-bottom:10px}
+.rmodal-box textarea{width:100%;background:var(--bg2);border:1px solid var(--bd);border-radius:var(--rs);color:var(--tx);padding:8px;font-size:.82rem;resize:vertical;min-height:80px;font-family:inherit}
+.rmodal-box textarea:focus{outline:none;border-color:var(--ac)}
+.rmodal-btns{display:flex;gap:8px;justify-content:flex-end;margin-top:10px}
 .flgbtn{display:flex;align-items:center;gap:4px;font-size:.74rem;color:var(--txm);cursor:pointer;background:none;border:none;padding:3px 5px;border-radius:4px;transition:all var(--t)}
 .flgbtn:hover,.flgbtn.fl{color:var(--yl)}
 .qctl{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
@@ -204,6 +214,7 @@ header{display:flex;align-items:center;justify-content:space-between;padding:10p
       <span class="badge bgb" id="qCat"></span>
       <span class="badge bgp" id="qSub"></span>
       <button class="flgbtn" id="flagBtn" onclick="toggleFlag()">🚩 Flag</button>
+      <button class="flgbtn rptbtn" id="reportBtn" onclick="openReportModal()">⚠️ Report</button>
     </div>
     <div id="qText" class="qtext"></div>
     <div id="qChoices" class="aclist"></div>
@@ -319,6 +330,19 @@ header{display:flex;align-items:center;justify-content:space-between;padding:10p
 </div>
 
 <!-- CONFIRM MODAL -->
+<!-- REPORT MODAL -->
+<div class="rmodal" id="reportModal" style="display:none">
+  <div class="rmodal-box">
+    <h3>⚠️ Report a Question Issue</h3>
+    <p>Describe the problem with this question (e.g. "correct answer is obvious", "wrong answer listed", "confusing wording"):</p>
+    <textarea id="reportNote" placeholder="Type your note here..."></textarea>
+    <div class="rmodal-btns">
+      <button class="btn bs" onclick="closeReportModal()">Cancel</button>
+      <button class="btn bdr" onclick="submitReport()">Submit Report</button>
+    </div>
+  </div>
+</div>
+
 <div class="overlay hn" id="confirmModal">
   <div class="modal">
     <h2 id="confirmTitle">Are you sure?</h2>
@@ -618,6 +642,7 @@ function getHistory(){ return lsGet('txpc_history') || [] }
 function getCatStats(){ return lsGet('txpc_cats') || {} }
 function getMissed(){ return lsGet('txpc_missed') || [] }
 function getBookmarks(){ return lsGet('txpc_bookmarks') || [] }
+function getReports(){ return lsGet('txpc_reports') || [] }
 function getTheme(){ return lsGet('txpc_theme') || 'dark' }
 
 function saveProfile(p){ lsSet('txpc_profile',p) }
@@ -625,6 +650,7 @@ function saveHistory(h){ lsSet('txpc_history',h) }
 function saveCatStats(s){ lsSet('txpc_cats',s) }
 function saveMissed(m){ lsSet('txpc_missed',m) }
 function saveBookmarks(b){ lsSet('txpc_bookmarks',b) }
+function saveReports(r){ lsSet('txpc_reports',r) }
 function saveTheme(t){ lsSet('txpc_theme',t) }
 
 // ---- Init ----
@@ -683,6 +709,7 @@ function exportProfile(){
     cats: getCatStats(),
     missed: getMissed(),
     bookmarks: getBookmarks(),
+    reports: getReports(),
     theme: getTheme(),
     exportedAt: new Date().toISOString()
   };
@@ -704,6 +731,7 @@ function importProfile(ev){
       if(d.cats) saveCatStats(d.cats);
       if(d.missed) saveMissed(d.missed);
       if(d.bookmarks) saveBookmarks(d.bookmarks);
+      if(d.reports) saveReports(d.reports);
       if(d.theme) { saveTheme(d.theme); applyTheme(); }
       loadProfile();
       renderHome();
@@ -720,6 +748,7 @@ function confirmReset(){
     lsSet('txpc_cats',{});
     lsSet('txpc_missed',[]);
     lsSet('txpc_bookmarks',[]);
+    lsSet('txpc_reports',[]);
     renderHome();
     alert('Progress reset.');
   });
@@ -972,6 +1001,7 @@ function renderQuestion(){
 
   // Flagged panel
   renderFlaggedPanel();
+  updateReportBtn();
 }
 
 function selectAnswer(origIdx){
@@ -979,6 +1009,59 @@ function selectAnswer(origIdx){
   renderQuestion();
 }
 
+function openReportModal(){
+  const modal = document.getElementById('reportModal');
+  document.getElementById('reportNote').value = '';
+  // Pre-fill if already reported
+  const q = state.questions[state.currentIdx];
+  if(q){
+    const existing = getReports().find(r => r.id === q.id);
+    if(existing) document.getElementById('reportNote').value = existing.note;
+  }
+  modal.style.display = 'flex';
+}
+function closeReportModal(){
+  document.getElementById('reportModal').style.display = 'none';
+}
+function submitReport(){
+  const note = document.getElementById('reportNote').value.trim();
+  if(!note){ alert('Please enter a note describing the issue.'); return; }
+  const q = state.questions[state.currentIdx];
+  if(!q) return;
+  const reports = getReports();
+  const existing = reports.findIndex(r => r.id === q.id);
+  const entry = {
+    id: q.id,
+    question: q.q,
+    category: q.cat,
+    sub: q.sub,
+    choices: q.choices,
+    answer: q.answer,
+    note: note,
+    reportedAt: new Date().toISOString()
+  };
+  if(existing >= 0) reports[existing] = entry;
+  else reports.push(entry);
+  saveReports(reports);
+  // Update button appearance
+  const btn = document.getElementById('reportBtn');
+  btn.classList.add('rp_');
+  btn.textContent = '⚠️ Reported';
+  closeReportModal();
+}
+function updateReportBtn(){
+  const q = state.questions[state.currentIdx];
+  const btn = document.getElementById('reportBtn');
+  if(!q || !btn) return;
+  const reported = getReports().find(r => r.id === q.id);
+  if(reported){
+    btn.classList.add('rp_');
+    btn.textContent = '⚠️ Reported';
+  } else {
+    btn.classList.remove('rp_');
+    btn.textContent = '⚠️ Report';
+  }
+}
 function toggleFlag(){
   const idx = state.currentIdx;
   if(state.flagged.has(idx)) state.flagged.delete(idx);
