@@ -1,0 +1,1388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Texas P&amp;C License Exam Practice</title>
+<style>
+:root{--bg:#0f1729;--bg2:#1a2540;--bgc:#1e2d4a;--bgch:#243455;--bd:#2d4070;--bdl:#3d5490;--tx:#e2e8f0;--tx2:#94a3b8;--txm:#64748b;--ac:#0ea5e9;--acd:#0284c7;--gr:#10b981;--grd:#059669;--rd:#ef4444;--rdd:#dc2626;--yl:#f59e0b;--pu:#8b5cf6;--sh:0 4px 24px rgba(0,0,0,.4);--r:12px;--rs:8px;--t:.2s ease}
+.lm{--bg:#f0f4f8;--bg2:#e2e8f0;--bgc:#fff;--bgch:#f8fafc;--bd:#cbd5e1;--bdl:#94a3b8;--tx:#0f172a;--tx2:#475569;--txm:#94a3b8;--sh:0 4px 24px rgba(0,0,0,.1)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--tx);min-height:100vh;transition:background var(--t),color var(--t)}
+#app{max-width:860px;margin:0 auto;padding:10px}
+.sc{display:none}.sc.active{display:block}
+header{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:var(--bg2);border:1px solid var(--bd);margin-bottom:12px;border-radius:var(--r);position:sticky;top:6px;z-index:100}
+.hl{display:flex;align-items:center;gap:8px}
+.li{width:28px;height:28px;background:linear-gradient(135deg,var(--ac),var(--pu));border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:1rem}
+.ht{font-size:.92rem;font-weight:700;color:var(--ac)}.hs{font-size:.62rem;color:var(--txm)}
+.ha{display:flex;gap:6px;align-items:center}.hu{font-size:.78rem;color:var(--tx2);margin-right:4px}
+.btn{display:inline-flex;align-items:center;gap:5px;padding:7px 13px;border-radius:var(--rs);font-size:.85rem;font-weight:600;cursor:pointer;border:none;transition:all var(--t);line-height:1}
+.btn:active{transform:scale(.97)}
+.bp{background:var(--ac);color:#fff}.bp:hover{background:var(--acd)}
+.bs{background:var(--bgc);color:var(--tx);border:1px solid var(--bd)}.bs:hover{background:var(--bgch)}
+.bg_{background:var(--gr);color:#fff}.bg_:hover{background:var(--grd)}
+.bdr{background:var(--rd);color:#fff}.bdr:hover{background:var(--rdd)}
+.bsm{padding:5px 9px;font-size:.76rem}
+.bi{padding:6px;border-radius:50%;background:var(--bgc);border:1px solid var(--bd);color:var(--tx2);cursor:pointer;font-size:.95rem;transition:all var(--t)}.bi:hover{background:var(--bgch)}
+.card{background:var(--bgc);border:1px solid var(--bd);border-radius:var(--r);padding:15px;margin-bottom:11px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:11px}
+@media(max-width:560px){.g2,.g3{grid-template-columns:1fr}}
+.pb{background:var(--bg2);border-radius:999px;height:6px;overflow:hidden}
+.pf{height:100%;border-radius:999px;transition:width .6s ease}
+.pfg{background:var(--gr)}.pfy{background:var(--yl)}.pfr{background:var(--rd)}.pfa{background:var(--ac)}
+.badge{display:inline-flex;align-items:center;padding:3px 7px;border-radius:999px;font-size:.7rem;font-weight:600}
+.bgg{background:rgba(16,185,129,.15);color:var(--gr)}
+.bgr{background:rgba(239,68,68,.15);color:var(--rd)}
+.bgy{background:rgba(245,158,11,.15);color:var(--yl)}
+.bgb{background:rgba(14,165,233,.15);color:var(--ac)}
+.bgp{background:rgba(139,92,246,.15);color:var(--pu)}
+.hero{text-align:center;padding:22px 16px 16px;background:linear-gradient(135deg,var(--bg2),var(--bgc));border-radius:var(--r);margin-bottom:12px;border:1px solid var(--bd)}
+.hero h1{font-size:1.45rem;font-weight:800;margin-bottom:4px}
+.hero h1 span{color:var(--ac)}
+.hero p{color:var(--tx2);font-size:.83rem;margin-bottom:10px}
+.rring{width:96px;height:96px;margin:0 auto 10px;position:relative;display:flex;align-items:center;justify-content:center}
+.rring svg{position:absolute;top:0;left:0;transform:rotate(-90deg)}
+.ri{text-align:center;z-index:1}.rp{font-size:1.65rem;font-weight:800}.rl{font-size:.58rem;color:var(--txm);text-transform:uppercase;letter-spacing:1px}
+.mdb{background:var(--bgc);border:2px solid var(--bd);border-radius:var(--r);padding:13px 10px;cursor:pointer;transition:all var(--t);text-align:center}
+.mdb:hover{border-color:var(--ac);transform:translateY(-2px);box-shadow:var(--sh)}
+.mdb .icon{font-size:1.6rem;margin-bottom:4px}.mdb .title{font-size:.88rem;font-weight:700;margin-bottom:2px}.mdb .desc{font-size:.7rem;color:var(--tx2)}
+.sh{display:flex;align-items:center;justify-content:space-between;margin-bottom:9px}
+.st{font-size:.95rem;font-weight:700}.ss{font-size:.7rem;color:var(--txm);margin-top:2px}
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.78);display:flex;align-items:center;justify-content:center;z-index:1000;padding:14px;backdrop-filter:blur(4px)}
+.overlay.hn{display:none}
+.modal{background:var(--bgc);border:1px solid var(--bd);border-radius:var(--r);padding:20px;max-width:440px;width:100%;box-shadow:var(--sh);animation:mi .2s ease}
+@keyframes mi{from{opacity:0;transform:scale(.95) translateY(-10px)}to{opacity:1;transform:scale(1) translateY(0)}}
+.modal h2{font-size:1.08rem;font-weight:700;margin-bottom:4px}
+.modal p{color:var(--tx2);font-size:.83rem;margin-bottom:12px}
+.mact{display:flex;gap:8px;justify-content:flex-end;margin-top:16px;flex-wrap:wrap}
+.trow{display:flex;align-items:center;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--bd)}
+.tlb{font-size:.83rem;font-weight:600}.tsb{font-size:.68rem;color:var(--txm)}
+.tgl{width:38px;height:20px;border-radius:999px;cursor:pointer;background:var(--bg2);border:2px solid var(--bd);position:relative;transition:all var(--t);flex-shrink:0}
+.tgl.on{background:var(--ac);border-color:var(--ac)}
+.tgl::after{content:'';position:absolute;top:2px;left:2px;width:12px;height:12px;border-radius:50%;background:#fff;transition:all var(--t)}
+.tgl.on::after{left:calc(100% - 14px)}
+.qhdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:11px;flex-wrap:wrap;gap:5px}
+.qpt{font-size:.79rem;color:var(--txm)}
+.qtm{font-size:.95rem;font-weight:700;color:var(--ac);font-variant-numeric:tabular-nums;letter-spacing:1px}
+.qtm.warn{color:var(--yl)}.qtm.dng{color:var(--rd);animation:pulse 1s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.qcard{background:var(--bgc);border:1px solid var(--bd);border-radius:var(--r);padding:17px;margin-bottom:9px}
+.qmeta{display:flex;align-items:center;gap:5px;margin-bottom:9px;flex-wrap:wrap}
+.qtext{font-size:.93rem;line-height:1.7;font-weight:500;margin-bottom:14px}
+.aclist{display:flex;flex-direction:column;gap:7px}
+.abtn{display:flex;align-items:flex-start;gap:9px;padding:10px 12px;border-radius:var(--rs);border:2px solid var(--bd);background:var(--bg2);cursor:pointer;transition:all var(--t);text-align:left;font-size:.85rem;color:var(--tx);width:100%}
+.abtn:hover:not(:disabled){border-color:var(--ac);background:var(--bgch)}
+.abtn .lt{min-width:22px;height:22px;border-radius:50%;background:var(--bgc);border:2px solid var(--bd);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.7rem;flex-shrink:0;transition:all var(--t)}
+.abtn.sel{border-color:var(--ac);background:rgba(14,165,233,.08)}.abtn.sel .lt{background:var(--ac);border-color:var(--ac);color:#fff}
+.abtn.cor{border-color:var(--gr);background:rgba(16,185,129,.08)}.abtn.cor .lt{background:var(--gr);border-color:var(--gr);color:#fff}
+.abtn.wrg{border-color:var(--rd);background:rgba(239,68,68,.08)}.abtn.wrg .lt{background:var(--rd);border-color:var(--rd);color:#fff}
+.abtn:disabled{cursor:default}
+.expbox{margin-top:11px;padding:10px 12px;border-radius:var(--rs);background:rgba(14,165,233,.07);border-left:3px solid var(--ac);font-size:.81rem;line-height:1.6;color:var(--tx2);display:none}
+.expbox.show{display:block}
+.flgbtn{display:flex;align-items:center;gap:4px;font-size:.74rem;color:var(--txm);cursor:pointer;background:none;border:none;padding:3px 5px;border-radius:4px;transition:all var(--t)}
+.flgbtn:hover,.flgbtn.fl{color:var(--yl)}
+.qctl{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.reshero{text-align:center;padding:24px;background:var(--bgc);border-radius:var(--r);border:1px solid var(--bd);margin-bottom:14px}
+.resnum{font-size:2.9rem;font-weight:800;line-height:1}.reslbl{font-size:.8rem;color:var(--txm);margin-bottom:10px}
+.verdict{font-size:1.25rem;font-weight:700;margin-bottom:4px}.verdict.pass{color:var(--gr)}.verdict.fail{color:var(--rd)}
+.crow{margin-bottom:9px}.crh{display:flex;justify-content:space-between;margin-bottom:3px;font-size:.79rem}
+.sfltr{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:11px}
+.fchip{padding:4px 10px;border-radius:999px;font-size:.74rem;font-weight:600;border:1px solid var(--bd);background:var(--bgc);cursor:pointer;transition:all var(--t);color:var(--tx2)}
+.fchip:hover{border-color:var(--ac);color:var(--ac)}.fchip.act{background:var(--ac);border-color:var(--ac);color:#fff}
+.stcard{background:var(--bgc);border:1px solid var(--bd);border-radius:var(--r);margin-bottom:7px;overflow:hidden}
+.stch{padding:10px 12px;cursor:pointer;display:flex;align-items:flex-start;justify-content:space-between;gap:7px}
+.stch:hover{background:var(--bgch)}.stcq{font-size:.84rem;line-height:1.6;font-weight:500}
+.stcb{padding:0 12px 12px;display:none;border-top:1px solid var(--bd)}.stcb.open{display:block}
+.stcc{display:flex;flex-direction:column;gap:4px;margin-top:7px}
+.stci{padding:5px 9px;border-radius:5px;font-size:.8rem;border:1px solid var(--bd)}
+.stci.ca{border-color:var(--gr);background:rgba(16,185,129,.1);color:var(--gr);font-weight:600}
+.hrow{display:flex;align-items:center;justify-content:space-between;padding:9px 13px;border-bottom:1px solid var(--bd);gap:8px;flex-wrap:wrap}
+.hrow:last-child{border-bottom:none}
+.fgrp{margin-bottom:12px}
+.flbl{display:block;font-size:.78rem;font-weight:600;margin-bottom:4px;color:var(--tx2)}
+.finp{width:100%;padding:8px 11px;border-radius:var(--rs);border:1px solid var(--bd);background:var(--bg2);color:var(--tx);font-size:.85rem;outline:none;transition:border-color var(--t)}
+.finp:focus{border-color:var(--ac)}
+.nav{display:flex;background:var(--bg2);border:1px solid var(--bd);border-radius:var(--r);overflow:hidden;margin-bottom:13px}
+.ni{flex:1;padding:7px 4px;text-align:center;cursor:pointer;border-right:1px solid var(--bd);transition:all var(--t);font-size:.68rem;color:var(--txm);font-weight:600;display:flex;flex-direction:column;align-items:center;gap:2px}
+.ni:last-child{border-right:none}.ni:hover{background:var(--bgc);color:var(--tx2)}.ni.act{background:var(--bgc);color:var(--ac)}
+.ni-ic{font-size:1rem}
+.divider{border:none;border-top:1px solid var(--bd);margin:9px 0}
+.hn{display:none!important}
+.empty{text-align:center;padding:28px 14px;color:var(--txm)}.empty .eic{font-size:1.9rem;margin-bottom:7px}
+.rcard{background:var(--bgc);border:1px solid var(--bd);border-radius:var(--r);margin-bottom:7px;overflow:hidden}
+.rcardh{padding:8px 12px;background:rgba(239,68,68,.07);border-bottom:1px solid var(--bd);font-size:.78rem;color:var(--txm)}
+.rcardb{padding:12px;font-size:.83rem}
+.rcardq{font-weight:600;margin-bottom:7px;line-height:1.5}
+.rwans{padding:5px 9px;border-radius:5px;border:1px solid var(--rd);background:rgba(239,68,68,.08);color:var(--rd);font-size:.79rem;margin-bottom:4px}
+.rcans{padding:5px 9px;border-radius:5px;border:1px solid var(--gr);background:rgba(16,185,129,.08);color:var(--gr);font-size:.79rem;margin-bottom:7px}
+.rcexp{font-size:.78rem;color:var(--tx2);padding:7px;border-radius:5px;background:rgba(14,165,233,.06);border-left:2px solid var(--ac)}
+@keyframes cf{0%{transform:translateY(-100%) rotate(0deg);opacity:1}100%{transform:translateY(110vh) rotate(720deg);opacity:0}}
+.cp{position:fixed;top:-20px;width:9px;height:9px;border-radius:2px;animation:cf linear forwards;pointer-events:none;z-index:9999}
+.mb{margin-bottom:8px}.mb2{margin-bottom:12px}.mb3{margin-bottom:16px}.mt{margin-top:8px}.mt2{margin-top:12px}
+.tx2c{color:var(--tx2)}.txmc{color:var(--txm)}.txac{color:var(--ac)}.txgc{color:var(--gr)}.txrc{color:var(--rd)}.txylc{color:var(--yl)}
+.tsm{font-size:.79rem}.fbold{font-weight:700}
+
+</style>
+</head>
+<body>
+<div id="app">
+
+<header>
+  <div class="hl">
+    <div class="li">🛡️</div>
+    <div><div class="ht">TX P&amp;C Exam Prep</div><div class="hs">Property &amp; Casualty</div></div>
+  </div>
+  <div class="ha">
+    <span id="headerUser" class="hu"></span>
+    <button class="bi" id="themeBtn" onclick="toggleTheme()" title="Toggle theme">🌙</button>
+  </div>
+</header>
+
+<nav class="nav">
+  <div class="ni act" id="nav-home" onclick="nav('homeScreen',this)"><span class="ni-ic">🏠</span><span>Home</span></div>
+  <div class="ni" id="nav-study" onclick="nav('studyScreen',this)"><span class="ni-ic">📖</span><span>Study</span></div>
+  <div class="ni" id="nav-history" onclick="nav('historyScreen',this)"><span class="ni-ic">📊</span><span>History</span></div>
+  <div class="ni" id="nav-profile" onclick="nav('profileScreen',this)"><span class="ni-ic">👤</span><span>Profile</span></div>
+</nav>
+
+<!-- HOME -->
+<div id="homeScreen" class="sc active">
+  <div class="hero">
+    <div class="rring">
+      <svg width="96" height="96" viewBox="0 0 96 96">
+        <circle cx="48" cy="48" r="40" fill="none" stroke="var(--bd)" stroke-width="8"/>
+        <circle id="readArc" cx="48" cy="48" r="40" fill="none" stroke="var(--ac)" stroke-width="8" stroke-dasharray="251" stroke-dashoffset="251" stroke-linecap="round"/>
+      </svg>
+      <div class="ri"><div class="rp" id="readPct">—</div><div class="rl">Readiness</div></div>
+    </div>
+    <h1>Texas <span>P&amp;C</span> Exam Prep</h1>
+    <p>General Lines – Property &amp; Casualty Licensing<br>150 questions · 70% to pass · 2.5 hours</p>
+    <div style="display:flex;gap:7px;justify-content:center;flex-wrap:wrap">
+      <span class="badge bgb" id="totalQBadge">Loading…</span>
+      <span class="badge bgg" id="quizBadge">0 Quizzes</span>
+      <span id="missedBadge"></span>
+    </div>
+  </div>
+
+  <div class="sh"><div><div class="st">Quiz Modes</div><div class="ss">Choose how to practice</div></div></div>
+  <div class="g3 mb2">
+    <div class="mdb" onclick="openCfg('quick')"><div class="icon">⚡</div><div class="title">Quick Quiz</div><div class="desc">4 questions<br>Fast warm-up</div></div>
+    <div class="mdb" onclick="openCfg('practice')"><div class="icon">📝</div><div class="title">Practice Quiz</div><div class="desc">30 questions<br>Topic review</div></div>
+    <div class="mdb" onclick="openCfg('full')"><div class="icon">🎯</div><div class="title">Full Practice Test</div><div class="desc">120 questions<br>2.5 hr timer</div></div>
+  </div>
+  <div class="g2 mb2">
+    <div class="mdb" onclick="openCfg('missed')"><div class="icon">🔄</div><div class="title">Missed Questions</div><div class="desc" id="missedCountHome">0 in retry deck</div></div>
+    <div class="mdb" onclick="nav('studyScreen',document.getElementById('nav-study'))"><div class="icon">📖</div><div class="title">Study Mode</div><div class="desc">Browse all questions<br>with answers shown</div></div>
+  </div>
+
+  <div class="card">
+    <div class="sh"><div class="st">📈 Category Performance</div></div>
+    <div id="catPerf"><div class="empty" style="padding:14px"><div class="eic">📊</div>Complete a quiz to see performance</div></div>
+  </div>
+  <div class="card">
+    <div class="sh"><div class="st">🕐 Recent Quizzes</div></div>
+    <div id="recentQ"><div class="empty" style="padding:14px"><div class="eic">📝</div>No quizzes taken yet</div></div>
+  </div>
+</div>
+
+<!-- QUIZ -->
+<div id="quizScreen" class="sc">
+  <div class="qhdr">
+    <div>
+      <div id="qModeLabel" style="font-size:.73rem;color:var(--txm);font-weight:700;text-transform:uppercase;letter-spacing:1px"></div>
+      <div id="qProgress" class="qpt"></div>
+    </div>
+    <div style="display:flex;align-items:center;gap:8px">
+      <div id="qTimer" class="qtm hn"></div>
+      <button class="btn bsm bs" onclick="endEarly()">End Quiz</button>
+    </div>
+  </div>
+  <div class="mb2"><div class="pb"><div id="qProgressBar" class="pf pfa" style="width:0%"></div></div></div>
+  <div class="qcard">
+    <div class="qmeta">
+      <span class="badge bgb" id="qCat"></span>
+      <span class="badge bgp" id="qSub"></span>
+      <button class="flgbtn" id="flagBtn" onclick="toggleFlag()">🚩 Flag</button>
+    </div>
+    <div id="qText" class="qtext"></div>
+    <div id="qChoices" class="aclist"></div>
+    <div id="qExp" class="expbox"></div>
+  </div>
+  <div class="qctl">
+    <button class="btn bs" id="prevBtn" onclick="goPrev()" style="display:none">← Prev</button>
+    <div style="flex:1"></div>
+    <button class="btn bp" id="nextBtn" onclick="goNext()">Next →</button>
+    <button class="btn bg_ hn" id="submitBtn" onclick="submitQuiz()">Submit ✓</button>
+  </div>
+  <div id="flagPanel" class="card mt2" style="display:none">
+    <div style="font-size:.78rem;font-weight:700;margin-bottom:5px;color:var(--yl)">🚩 Flagged — click to jump</div>
+    <div id="flagList" style="display:flex;gap:5px;flex-wrap:wrap"></div>
+  </div>
+</div>
+
+<!-- RESULTS -->
+<div id="resultsScreen" class="sc">
+  <div class="reshero">
+    <div id="resVerdict" class="verdict"></div>
+    <div id="resScore" class="resnum"></div>
+    <div id="resLabel" class="reslbl"></div>
+    <div style="display:flex;gap:7px;justify-content:center;flex-wrap:wrap;margin-top:5px" id="resBadges"></div>
+  </div>
+  <div class="card mb2">
+    <div class="sh"><div class="st">📊 Category Breakdown</div></div>
+    <div id="resCats"></div>
+  </div>
+  <div class="card mb2">
+    <div class="sh"><div class="st">❌ Wrong Answers</div><span id="wrongCnt" class="badge bgr"></span></div>
+    <div id="resWrong"></div>
+  </div>
+  <div class="card mb2 hn" id="resFlagSec">
+    <div class="sh"><div class="st">🚩 Flagged Questions</div></div>
+    <div id="resFlags"></div>
+  </div>
+  <div style="display:flex;gap:8px;flex-wrap:wrap">
+    <button class="btn bp" onclick="nav('homeScreen',document.getElementById('nav-home'))">🏠 Home</button>
+    <button class="btn bs" onclick="retryWrong()">🔄 Retry Wrong</button>
+    <button class="btn bs" onclick="openCfg('practice')">📝 New Quiz</button>
+  </div>
+</div>
+
+<!-- STUDY -->
+<div id="studyScreen" class="sc">
+  <div class="sh">
+    <div><div class="st">📖 Study Mode</div><div class="ss" id="studyCnt"></div></div>
+    <input type="text" class="finp" id="studySearch" placeholder="Search…" style="max-width:190px;padding:5px 9px;font-size:.78rem" oninput="renderStudy()">
+  </div>
+  <div class="sfltr" id="studyFilters"></div>
+  <div id="studyList"></div>
+</div>
+
+<!-- HISTORY -->
+<div id="historyScreen" class="sc">
+  <div class="sh"><div><div class="st">📊 Quiz History</div><div class="ss">Last 20 results</div></div><button class="btn bsm bs" onclick="clearHistory()">Clear</button></div>
+  <div class="card" style="padding:0;overflow:hidden"><div id="histList"></div></div>
+</div>
+
+<!-- PROFILE -->
+<div id="profileScreen" class="sc">
+  <div class="sh"><div class="st">👤 Profile &amp; Settings</div></div>
+  <div class="card">
+    <div class="fgrp mb2">
+      <label class="flbl">Your Name</label>
+      <input type="text" class="finp" id="nameInput" placeholder="Enter your name" oninput="saveName()">
+    </div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <button class="btn bp" onclick="exportProfile()">⬇️ Export Profile</button>
+      <label class="btn bs" style="cursor:pointer">⬆️ Import Profile<input type="file" accept=".json" style="display:none" onchange="importProfile(event)"></label>
+      <button class="btn bdr" onclick="confirmReset()">🗑️ Reset Progress</button>
+    </div>
+  </div>
+  <div class="card">
+    <div class="sh"><div class="st">📚 About This App</div></div>
+    <div style="font-size:.83rem;color:var(--tx2);line-height:1.7">
+      <p>Texas General Lines – Property &amp; Casualty exam prep with <strong id="qCountInfo">220</strong> questions covering all 4 official categories.</p>
+      <br>
+      <p><strong>Exam facts:</strong> 150 total questions (120 scored + 30 pretest) · 70% to pass (84/120) · 2.5 hour limit</p>
+      <br>
+      <p><strong>Content areas:</strong></p>
+      <ul style="margin-left:16px;margin-top:4px">
+        <li>General Insurance Concepts (20%)</li>
+        <li>Property Insurance (30%)</li>
+        <li>Casualty/Liability Insurance (25%)</li>
+        <li>Texas Laws &amp; Regulations (25%)</li>
+      </ul>
+      <br>
+      <p class="txmc">Questions should be reviewed periodically for regulatory changes. This app is for study purposes only and does not guarantee exam results.</p>
+    </div>
+  </div>
+</div>
+
+<!-- CONFIG MODAL -->
+<div class="overlay hn" id="cfgModal">
+  <div class="modal">
+    <h2 id="cfgTitle">Configure Quiz</h2>
+    <p id="cfgDesc"></p>
+    <div class="trow">
+      <div><div class="tlb">Tailored Mode</div><div class="tsb">Pulls more Qs from weak categories</div></div>
+      <div class="tgl" id="tailoredTgl" onclick="this.classList.toggle('on')"></div>
+    </div>
+    <div class="trow" id="noBackRow">
+      <div><div class="tlb">Lock Answers (No Going Back)</div><div class="tsb">Disable previous button — exam-like</div></div>
+      <div class="tgl" id="noBackTgl" onclick="this.classList.toggle('on')"></div>
+    </div>
+    <div class="mact">
+      <button class="btn bs" onclick="closeCfg()">Cancel</button>
+      <button class="btn bp" onclick="startFromCfg()">Start Quiz →</button>
+    </div>
+  </div>
+</div>
+
+<!-- CONFIRM MODAL -->
+<div class="overlay hn" id="confirmModal">
+  <div class="modal">
+    <h2 id="confirmTitle">Are you sure?</h2>
+    <p id="confirmMsg"></p>
+    <div class="mact">
+      <button class="btn bs" onclick="closeConfirm()">Cancel</button>
+      <button class="btn bdr" id="confirmOkBtn">Confirm</button>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<script>
+// Texas P&C Insurance Exam Question Bank - 230 Questions
+const QUESTIONS = [
+// ===== CATEGORY 1: GENERAL INSURANCE CONCEPTS (~20%) =====
+{id:1,cat:"General Insurance Concepts",sub:"Fundamental Principles",q:"Which principle requires that an insured must face the possibility of financial loss to have a valid insurance contract?",choices:["Principle of indemnity","Insurable interest","Utmost good faith","Subrogation"],answer:1,exp:"Insurable interest means the insured must stand to suffer a financial loss if the insured event occurs. Without it, the contract is void and unenforceable."},
+{id:2,cat:"General Insurance Concepts",sub:"Fundamental Principles",q:"The principle of indemnity states that insurance should:",choices:["Provide a profit to the insured","Restore the insured to the financial position before the loss","Pay the full replacement cost in all cases","Compensate based on the premium paid"],answer:1,exp:"Indemnity means insurance restores the insured to their pre-loss financial position—no better, no worse—preventing insurance from becoming a source of profit."},
+{id:3,cat:"General Insurance Concepts",sub:"Fundamental Principles",q:"Subrogation allows the insurance company to:",choices:["Cancel a policy after a claim","Recover from a third party who caused the loss after paying the insured","Increase premiums after a loss","Deny coverage for fraudulent claims"],answer:1,exp:"After paying a claim, the insurer steps into the insured's shoes to recover the payment from the responsible third party, preventing the insured from double recovery."},
+{id:4,cat:"General Insurance Concepts",sub:"Fundamental Principles",q:"Utmost good faith (uberrimae fidei) in insurance means:",choices:["Only the insurer must be honest","Both parties must fully disclose all material facts","The insured can withhold information not specifically asked about","Claims must be paid within good-faith time frames"],answer:1,exp:"Both the insurer and insured must act with complete honesty and disclose all material facts relevant to the insurance contract."},
+{id:5,cat:"General Insurance Concepts",sub:"Contract Characteristics",q:"An insurance policy is considered a contract of adhesion because:",choices:["Both parties negotiate all terms equally","The insurer drafts the contract and the insured accepts or rejects it as-is","The insured writes the policy terms","Either party can change policy terms at any time"],answer:1,exp:"Contracts of adhesion are drafted by one party (insurer) and accepted or rejected by the other (insured) without negotiation, so ambiguities are resolved in the insured's favor."},
+{id:6,cat:"General Insurance Concepts",sub:"Contract Characteristics",q:"An insurance policy is aleatory because:",choices:["It requires both parties to perform equally","One party may receive more value than the other depending on chance","It can be cancelled by either party at will","It guarantees a return of premium"],answer:1,exp:"Aleatory contracts involve unequal exchange of values based on an uncertain event—the insured may pay small premiums but receive a large claim payment, or pay premiums with no claims."},
+{id:7,cat:"General Insurance Concepts",sub:"Contract Characteristics",q:"An insurance policy is considered a unilateral contract because:",choices:["Both parties make legally enforceable promises","Only the insurer makes a legally enforceable promise","Neither party makes promises","The insured can cancel anytime without penalty"],answer:1,exp:"Only the insurer makes a legally enforceable promise to pay claims. The insured is not legally obligated to pay premiums—non-payment results in cancellation, not a lawsuit."},
+{id:8,cat:"General Insurance Concepts",sub:"Policy Structure",q:"What is a binder in insurance?",choices:["A permanent policy document","Temporary evidence of coverage until the actual policy is issued","A policy endorsement adding coverage","A summary of policy exclusions"],answer:1,exp:"A binder provides temporary proof of insurance coverage while the formal policy is being prepared. It is legally binding but expires when the policy is issued or within the stated period."},
+{id:9,cat:"General Insurance Concepts",sub:"Policy Structure",q:"An endorsement to an insurance policy:",choices:["Cancels the policy entirely","Modifies, adds to, or restricts coverage on an existing policy","Is the same as a binder","Replaces the declarations page"],answer:1,exp:"Endorsements (also called riders on life policies) are written modifications to a policy that change its terms, either broadening or restricting coverage."},
+{id:10,cat:"General Insurance Concepts",sub:"Policy Structure",q:"The declarations page of an insurance policy typically contains:",choices:["The legal fine print and all exclusions","Named insured, policy period, coverage limits, and premium","The claims procedures only","Definitions of covered perils"],answer:1,exp:"The declarations (dec) page is a summary at the front of the policy listing the insured's name, property description, coverage limits, deductibles, premium, and policy period."},
+{id:11,cat:"General Insurance Concepts",sub:"Policy Structure",q:"A deductible in an insurance policy is:",choices:["The maximum the insurer will pay","The amount the insured pays out-of-pocket before insurance pays","The insurer's profit margin","The premium amount"],answer:1,exp:"A deductible is the insured's retained portion of each loss; the insurer pays only the amount exceeding the deductible, up to policy limits."},
+{id:12,cat:"General Insurance Concepts",sub:"Policy Structure",q:"A coinsurance clause in property insurance requires the insured to:",choices:["Share premiums with another insurer","Insure property for at least a specified percentage of value to receive full loss payment","Pay 80% of all claims","Maintain two separate policies"],answer:1,exp:"A coinsurance clause (typically 80%) requires the insured to carry insurance equal to at least that percentage of the property's value; failure results in a proportional penalty at loss time."},
+{id:13,cat:"General Insurance Concepts",sub:"Policy Structure",q:"A warranty in insurance is best described as:",choices:["A guarantee by the insurer to pay all claims","A statement by the insured that must be literally true or coverage may be voided","A promise by the agent to obtain coverage","An optional rider added to the policy"],answer:1,exp:"A warranty is a statement by the insured incorporated into the contract; if false, the insurer may void the policy, even if the breach did not contribute to the loss."},
+{id:14,cat:"General Insurance Concepts",sub:"Fundamental Principles",q:"Which principle prevents an insured from collecting more than the actual amount of the loss?",choices:["Subrogation","Insurable interest","Indemnity","Contribution"],answer:2,exp:"The principle of indemnity prevents over-insurance by limiting recovery to the actual financial loss sustained, ensuring insurance does not become a source of profit."},
+{id:15,cat:"General Insurance Concepts",sub:"Fundamental Principles",q:"The doctrine of contribution in insurance applies when:",choices:["Two insurers both cover the same loss and share payment proportionally","One policy contributes premium to another","The insured pays part of the claim","An agent shares commission with the insured"],answer:0,exp:"When two or more policies cover the same loss, contribution (other insurance clause) requires each insurer to pay its proportionate share, preventing the insured from collecting double benefits."},
+{id:16,cat:"General Insurance Concepts",sub:"Fundamental Principles",q:"A representation in an insurance application is:",choices:["An absolute guarantee that a statement is true","A statement believed to be true that induces the insurer to issue the policy","A warranty that must be exactly correct","A signed legal affidavit"],answer:1,exp:"Representations are statements believed to be substantially true. Unlike warranties, minor inaccuracies in representations don't automatically void the policy unless they are material."},
+{id:17,cat:"General Insurance Concepts",sub:"Fundamental Principles",q:"Concealment in insurance occurs when:",choices:["The insurer fails to explain policy terms","The insured knowingly withholds material information","The agent forgets to submit the application","The insurer denies a valid claim"],answer:1,exp:"Concealment is the intentional failure to disclose known material facts that would affect the insurer's decision to accept the risk or set the premium."},
+{id:18,cat:"General Insurance Concepts",sub:"Risk",q:"Which of the following is an example of a pure risk?",choices:["Investing in the stock market","Starting a new business","Owning a home that could be damaged by fire","Gambling at a casino"],answer:2,exp:"Pure risk involves only the chance of loss or no loss (never gain), such as property damage. Speculative risks (investments, gambling) have the possibility of gain, loss, or breakeven."},
+{id:19,cat:"General Insurance Concepts",sub:"Risk",q:"Risk transference in insurance means:",choices:["Moving risk from one property to another","Shifting the financial consequences of risk to the insurer in exchange for premium","Eliminating risk through safety measures","Accepting risk without purchasing insurance"],answer:1,exp:"Risk transference is the fundamental concept of insurance—the insured transfers the financial consequences of potential loss to the insurer by paying a premium."},
+{id:20,cat:"General Insurance Concepts",sub:"Policy Structure",q:"The insuring agreement in an insurance policy:",choices:["Lists all exclusions","States the insurer's promise to pay covered losses","Sets the premium amount","Defines legal terms only"],answer:1,exp:"The insuring agreement is the section where the insurer promises to pay for covered losses in exchange for premium, defining the core coverage provided by the policy."},
+{id:21,cat:"General Insurance Concepts",sub:"Policy Structure",q:"Pro-rata cancellation means the return premium is calculated:",choices:["With a 10% penalty","Based on the exact unused proportion of the premium with no penalty","With a short-rate penalty","At the company's sole discretion"],answer:1,exp:"Pro-rata cancellation returns the exact proportion of unused premium with no penalty. It is typically used when the insurer initiates cancellation."},
+{id:22,cat:"General Insurance Concepts",sub:"Policy Structure",q:"Short-rate cancellation when the insured cancels a policy means:",choices:["The return premium is higher than pro-rata","There is a penalty—the insured receives less than the pro-rata refund","Premium is returned in full","No premium is returned at all"],answer:1,exp:"Short-rate cancellation involves a penalty for early termination by the insured; they receive less than the proportional unused premium to compensate the insurer for administrative costs."},
+{id:23,cat:"General Insurance Concepts",sub:"Fundamental Principles",q:"What does it mean for an insurance contract to be conditional?",choices:["The insurer can cancel at any time for any reason","The insured must meet certain conditions for the insurer's promise to be enforceable","Both parties must pay premiums to each other","Coverage is only effective during daytime hours"],answer:1,exp:"Insurance contracts are conditional because the insurer's obligation to pay is conditioned upon the insured complying with policy conditions such as timely notice of loss and cooperation."},
+{id:44,cat:"General Insurance Concepts",sub:"Policy Structure",q:"What is the primary purpose of the 'conditions' section of an insurance policy?",choices:["To define the perils covered","To set policy limits","To outline the duties of the insured and insurer and establish how the policy operates","To list covered property locations"],answer:2,exp:"The conditions section specifies the obligations of both parties: notice of loss, proof of loss, cooperation requirements, how disputes are resolved, and other operational requirements."},
+{id:45,cat:"General Insurance Concepts",sub:"Policy Structure",q:"An 'occurrence' in liability insurance is typically defined as:",choices:["Each individual claim filed","An accident or repeated exposure to conditions causing unexpected injury or damage","Any event resulting in a premium increase","A scheduled inspection of the premises"],answer:1,exp:"An occurrence includes accidents and continuous or repeated exposure to conditions causing bodily injury or property damage that the insured did not intend or expect."},
+{id:46,cat:"General Insurance Concepts",sub:"Risk",q:"Which method of handling risk involves purchasing insurance?",choices:["Risk retention","Risk avoidance","Risk reduction","Risk transfer"],answer:3,exp:"Risk transfer involves shifting the financial burden of potential loss to another party—the insurer—in exchange for a premium payment."},
+{id:47,cat:"General Insurance Concepts",sub:"Fundamental Principles",q:"A 'hazard' in insurance terminology is:",choices:["The cause of the loss (peril)","A condition that increases the likelihood or severity of a loss","The financial impact of a loss","An excluded peril"],answer:1,exp:"A hazard is a condition that increases the probability or potential severity of a loss. Physical hazards are tangible conditions; moral hazards involve dishonesty; morale hazards involve careless indifference."},
+{id:48,cat:"General Insurance Concepts",sub:"Fundamental Principles",q:"What is the Law of Large Numbers and how does it apply to insurance?",choices:["The more claims filed, the more expensive insurance becomes","The larger the number of similar exposures, the more predictable the actual loss experience becomes","Insurance companies with larger staffs are more profitable","The more policies sold, the higher the individual premium"],answer:1,exp:"The Law of Large Numbers is the statistical principle underlying insurance: as the number of similar risks increases, actual loss experience approaches expected loss experience, allowing accurate pricing."},
+{id:231,cat:"General Insurance Concepts",sub:"Contract Characteristics",q:"An insurance contract is a personal contract, meaning:",choices:["Coverage is based on property, not the owner","The policy covers the named insured personally and cannot be transferred without insurer consent","Only one person can be insured","It cannot be cancelled"],answer:1,exp:"Insurance is a personal contract between the insurer and the named insured. The insured cannot assign or transfer the policy to another person without the insurer's consent."},
+
+// ===== CATEGORY 2: PROPERTY INSURANCE (~30%) =====
+{id:24,cat:"Property Insurance",sub:"Homeowners",q:"Under a standard HO-3 homeowners policy, the dwelling is covered on what basis?",choices:["Named perils only","Open perils for the dwelling; named perils for personal property","Named perils for both dwelling and contents","Open perils for everything including flood and earthquake"],answer:1,exp:"The HO-3 is the most common homeowners policy. It provides open perils (all-risk) coverage on the dwelling and other structures, but only named perils coverage on personal property."},
+{id:25,cat:"Property Insurance",sub:"Homeowners",q:"Which homeowners form provides the broadest coverage for both the dwelling and personal property?",choices:["HO-1","HO-2","HO-3","HO-5"],answer:3,exp:"The HO-5 (Comprehensive Form) provides open perils coverage on both the dwelling and personal property, making it the most comprehensive standard homeowners form available."},
+{id:26,cat:"Property Insurance",sub:"Homeowners",q:"The HO-4 renters insurance policy covers:",choices:["The dwelling structure and its contents","Personal property and personal liability only (not the building structure)","The landlord's property from liability claims","Only the interior of the rented unit"],answer:1,exp:"HO-4 is for tenants/renters. It covers the insured's personal property and provides personal liability coverage, but does not cover the physical structure owned by the landlord."},
+{id:27,cat:"Property Insurance",sub:"Homeowners",q:"Under a standard homeowners policy, flood damage is:",choices:["Covered under open perils provisions","Excluded and requires a separate NFIP or private flood policy","Covered if caused by a burst pipe inside the home","Automatically included for Texas coastal properties"],answer:1,exp:"Flood is a standard exclusion in all homeowners policies. Separate flood coverage must be purchased through the National Flood Insurance Program (NFIP) or a private flood insurer."},
+{id:28,cat:"Property Insurance",sub:"Homeowners",q:"Additional Living Expenses (ALE) coverage under a homeowners policy pays for:",choices:["Permanent upgrades after a covered loss","Increased living costs when the home is uninhabitable due to a covered loss","Loss of rental income","Business income lost during home repairs"],answer:1,exp:"ALE coverage reimburses the insured for the additional cost of living elsewhere (hotel, restaurant meals, etc.) while the home is being repaired after a covered loss."},
+{id:29,cat:"Property Insurance",sub:"Valuation",q:"Actual Cash Value (ACV) is calculated as:",choices:["Replacement cost minus deductible","Replacement cost minus physical depreciation","Original purchase price minus inflation","Market value plus any improvements made"],answer:1,exp:"ACV equals replacement cost new minus physical depreciation. It reflects the item's current market value considering its age, condition, and useful remaining life."},
+{id:30,cat:"Property Insurance",sub:"Valuation",q:"Replacement Cost coverage for personal property pays:",choices:["ACV minus the deductible","The cost to replace with new property of like kind and quality without deducting depreciation","The original purchase price","Whatever the insured paid for the item originally"],answer:1,exp:"Replacement cost coverage pays the cost to replace damaged property with new property of similar type and quality, without subtracting for depreciation."},
+{id:31,cat:"Property Insurance",sub:"NFIP/Flood",q:"The National Flood Insurance Program (NFIP) maximum coverage for a single-family residential building is:",choices:["$100,000","$250,000","$500,000","$1,000,000"],answer:1,exp:"The NFIP provides maximum building coverage of $250,000 for residential buildings and $500,000 for non-residential (commercial) buildings."},
+{id:32,cat:"Property Insurance",sub:"Commercial Property",q:"Business Interruption (Business Income) insurance pays for:",choices:["Physical damage to the business building","Lost net income and continuing expenses when a business cannot operate due to a covered property loss","Employee wages during labor strikes","Business debts after bankruptcy proceedings"],answer:1,exp:"Business Income (BI) coverage replaces lost net income and pays continuing operating expenses while the business is shut down or reduced in capacity due to a covered physical loss."},
+{id:33,cat:"Property Insurance",sub:"Dwelling Policies",q:"The Dwelling DP-3 form provides coverage on the dwelling on what basis?",choices:["Named perils only","Open perils (all-risk) for the dwelling","Both dwelling and contents on open perils","Neither open nor named—it is an agreed-value policy"],answer:1,exp:"The DP-3 is the broadest dwelling form, covering the dwelling on an open-perils basis. Contents, if covered, are on a named-perils basis."},
+{id:34,cat:"Property Insurance",sub:"Named vs Open Perils",q:"A named perils policy covers:",choices:["All causes of loss except those specifically excluded","Only the specific perils listed in the policy","Perils the insured names at the time of loss","All perils during named storm events only"],answer:1,exp:"Named perils policies cover only those causes of loss specifically listed (e.g., fire, lightning, windstorm). The burden of proof is on the insured to show the loss resulted from a named peril."},
+{id:35,cat:"Property Insurance",sub:"Named vs Open Perils",q:"Under an open perils (all-risk) policy, the burden of proof in a claim is:",choices:["On the insured to prove the loss resulted from a covered peril","On the insurer to prove the loss was caused by an excluded peril","Shared equally between insured and insurer","On the state insurance department to investigate"],answer:1,exp:"Under open perils policies, all losses are covered unless the insurer can prove an exclusion applies—shifting the burden of proof to the insurer, opposite of named perils."},
+{id:36,cat:"Property Insurance",sub:"Inland Marine",q:"Inland marine insurance was originally designed to cover:",choices:["Goods transported by ocean-going vessels","Goods in transit over land and property with special mobility exposures","Flood damage to inland property","Marine vessels used on rivers and lakes"],answer:1,exp:"Inland marine evolved from ocean marine to cover property in transit over land, scheduled personal property floaters, and instrumentalities of transportation and communication."},
+{id:37,cat:"Property Insurance",sub:"Builders Risk",q:"Builders Risk insurance is designed to cover:",choices:["The finished building after construction is complete","A structure during the course of construction","The builder's liability for worker injuries","Materials after they are installed and accepted by the owner"],answer:1,exp:"Builders Risk (Course of Construction) insurance covers the structure, materials, and equipment while a building is under construction, typically on an all-risk basis until completion."},
+{id:38,cat:"Property Insurance",sub:"Commercial Property",q:"'Extra expense' coverage in a commercial property policy pays for:",choices:["Lost profits when a business closes permanently","Additional expenses to continue operations and minimize business interruption after a covered loss","Permanent improvements to the damaged building","Employee bonuses paid after a major disaster"],answer:1,exp:"Extra expense pays the additional costs beyond normal operating expenses to continue business operations or minimize shutdown time after a covered property loss."},
+{id:39,cat:"Property Insurance",sub:"Fire Insurance",q:"The Standard Fire Policy (165-line policy) covers:",choices:["Commercial fires only—no residential","Fire, lightning, and removal of property imperiled by fire","All perils including flood and wind","Arson and intentional fires only"],answer:1,exp:"The Standard Fire Policy, once the foundation of property insurance, covers fire, lightning, and removal of property endangered by fire. Modern package policies have largely replaced it."},
+{id:40,cat:"Property Insurance",sub:"TWIA",q:"The Texas Windstorm Insurance Association (TWIA) provides:",choices:["Flood insurance for all Texas counties","Wind and hail coverage for eligible coastal properties that cannot get coverage in the voluntary market","Auto insurance for all Texas coastal residents","Homeowners insurance for all uninsurable Texans"],answer:1,exp:"TWIA is a residual market insurer providing wind and hail coverage to eligible properties in 14 Texas Gulf Coast counties and parts of Harris County when standard market coverage is unavailable."},
+{id:41,cat:"Property Insurance",sub:"Homeowners",q:"Under HO forms, personal property is covered:",choices:["Only at the insured residence location","Worldwide but coverage away from residence may be limited to 10% of the Coverage C limit","Only in the United States","Only if specifically scheduled on the policy"],answer:1,exp:"HO policies cover personal property on a worldwide basis, though coverage away from the residence is typically limited to 10% of the Coverage C limit or $1,000, whichever is greater."},
+{id:42,cat:"Property Insurance",sub:"Homeowners",q:"The HO-6 condo unit owner policy covers:",choices:["The entire condominium building","The unit interior, personal property, and personal liability—what the master policy does not cover","Only personal property inside the unit","The building structure and all common areas"],answer:1,exp:"HO-6 covers the condo unit owner's personal property, improvements to the unit interior, and personal liability—filling gaps left by the condominium association's master policy."},
+{id:43,cat:"Property Insurance",sub:"Commercial Property",q:"The Commercial Package Policy (CPP) allows commercial insureds to:",choices:["Combine multiple lines of insurance into one policy","Insure more than one building under a single limit","Pool premiums with other businesses in their industry","Purchase property coverage without any liability"],answer:0,exp:"The CPP is a modular policy combining property, liability, and other coverage parts under one policy with a common declarations page, providing flexibility and often a premium discount."},
+{id:100,cat:"Property Insurance",sub:"Homeowners",q:"The HO-8 Modified Coverage Form is designed for:",choices:["New construction with the latest building codes","Older homes where replacement cost would far exceed market value","Mobile or manufactured homes","High-value homes requiring extra coverage"],answer:1,exp:"HO-8 is for older homes, typically paying ACV rather than replacement cost, since restoring the home with original materials (plaster, custom woodwork) would cost far more than the home's market value."},
+{id:101,cat:"Property Insurance",sub:"Homeowners",q:"Under HO-3, Coverage C (personal property) is typically set at what percentage of Coverage A (dwelling)?",choices:["10%","25%","50%","75%"],answer:2,exp:"Coverage C (personal property) under HO-3 is typically set at 50% of Coverage A (dwelling). This default can be increased or decreased to meet the insured's needs."},
+{id:102,cat:"Property Insurance",sub:"NFIP/Flood",q:"The standard waiting period before NFIP flood coverage becomes effective is:",choices:["No waiting period","7 days","30 days","90 days"],answer:2,exp:"NFIP policies have a standard 30-day waiting period from the application and premium payment date before coverage becomes effective, with limited exceptions such as loan closings."},
+{id:103,cat:"Property Insurance",sub:"Ocean Marine",q:"Ocean marine 'hull' coverage insures:",choices:["Cargo being transported","The vessel itself—the ship's hull and machinery","The shipowner's liability to third parties","The shipping containers used for cargo"],answer:1,exp:"Hull coverage in ocean marine insures the vessel itself (hull and machinery). Protection and Indemnity (P&I) covers the shipowner's liability; cargo coverage covers transported goods."},
+{id:104,cat:"Property Insurance",sub:"Commercial Property",q:"A 'blanket' property policy covers:",choices:["A single item for an agreed upon amount","Multiple locations or property types under one combined limit","Only blankets and similar household items","Property only during specific seasons"],answer:1,exp:"A blanket policy covers multiple buildings or locations under one limit, allowing flexibility since the full limit can be applied to any one location without fixed sublimits."},
+{id:105,cat:"Property Insurance",sub:"Commercial Property",q:"A 'specific' property insurance policy covers:",choices:["All property at all locations under one combined limit","Each location or item with its own separate limit","Only specially valuable or unique property","Items that must be specifically described"],answer:1,exp:"A specific policy assigns a separate coverage limit to each building, location, or item listed, unlike a blanket policy that applies one limit across all covered property."},
+{id:106,cat:"Property Insurance",sub:"Valuation",q:"Agreed value coverage in property insurance means:",choices:["The insurer and insured agree on value at the time of loss","The value is established at policy inception and full amount is paid at total loss without coinsurance","The policy pays whatever a third-party appraiser determines","All partial losses are paid at 100% with no deductible"],answer:1,exp:"Agreed value suspends the coinsurance clause. The value is agreed upon at policy inception, and in a total loss, the full agreed value is paid without coinsurance penalty."},
+{id:107,cat:"Property Insurance",sub:"Earthquake",q:"Standard homeowners and commercial property policies:",choices:["Include earthquake coverage automatically","Exclude earthquake but it can be added by endorsement or separate policy","Cover earthquake in Texas coastal areas only","Cover only earthquake damage to building foundations"],answer:1,exp:"Earthquake is a standard exclusion in property policies. Earthquake coverage must be added by endorsement or purchased as a separate policy from the insurer or a specialty market."},
+{id:108,cat:"Property Insurance",sub:"TWIA",q:"To be eligible for TWIA coverage, a structure must:",choices:["Be located anywhere in Texas","Be in a designated catastrophe area, properly constructed to TWIA standards, and certified by TDI","Have been built before 1970","Be commercial property worth over $500,000"],answer:1,exp:"TWIA eligibility requires the property to be in a designated first-tier coastal county, built to TWIA-approved windstorm construction standards, and inspected/certified by TDI engineers."},
+{id:109,cat:"Property Insurance",sub:"Dwelling Policies",q:"The DP-1 (Basic Form) dwelling policy covers:",choices:["Open perils for the dwelling structure","Only fire, lightning, and internal explosion as standard perils","Fire, lightning, windstorm, and 15 named perils","All perils except flood and earthquake"],answer:1,exp:"The DP-1 Basic Form is the most restrictive dwelling form, covering only fire, lightning, and internal explosion. Windstorm and other perils can be added by endorsement."},
+{id:110,cat:"Property Insurance",sub:"Inland Marine",q:"A 'floater' policy in inland marine insurance covers:",choices:["Boats and watercraft on inland lakes","Moveable property without a fixed location that travels with the owner","Fixed equipment at a single permanent location","Floating oil platforms in offshore drilling"],answer:1,exp:"Floater policies cover moveable property such as jewelry, cameras, musical instruments, or contractors' equipment that moves with the owner rather than staying at a fixed location."},
+{id:111,cat:"Property Insurance",sub:"Homeowners",q:"Under an HO-3 policy, Coverage B (Other Structures) provides coverage for:",choices:["Personal property stored in other structures","Detached structures on the residence premises at 10% of Coverage A","All structures within 1 mile of the home","Structures rented to others at full Coverage A limits"],answer:1,exp:"Coverage B covers detached structures such as fences, garages, and sheds at 10% of the Coverage A (dwelling) limit. Structures used for business or rented to non-residents may have restrictions."},
+{id:112,cat:"Property Insurance",sub:"Commercial Property",q:"A 'valued' policy in property insurance means:",choices:["Property is insured based on its current market value","The policy pays the face amount stated on the policy in the event of total loss, without proof of actual value","Coverage is based on the insured's valuation at time of loss","The insurer can contest the value at any time"],answer:1,exp:"A valued policy pays a predetermined agreed amount upon total loss without requiring proof of actual cash value. Texas has a valued policy law for certain real property losses."},
+{id:113,cat:"Property Insurance",sub:"Homeowners",q:"Personal property typically excluded from standard HO coverage includes:",choices:["Furniture and appliances","Motor vehicles, aircraft, and animals","Clothing and jewelry under $500","Books and records"],answer:1,exp:"Standard HO policies exclude motor vehicles (covered by auto policies), aircraft, and animals. Other common exclusions include business property on premises above small sublimits, and money above low limits."},
+{id:114,cat:"Property Insurance",sub:"Commercial Property",q:"An 'ordinance or law' endorsement in a property policy covers:",choices:["Losses caused by violating building codes","The increased cost of rebuilding to current building codes after a covered loss","Fines levied by government agencies","Legal fees for code violations"],answer:1,exp:"Ordinance or Law coverage pays the additional cost of demolishing the undamaged portion of a building and rebuilding to current code standards after a covered partial loss."},
+{id:115,cat:"Property Insurance",sub:"NFIP/Flood",q:"Under the NFIP, flood insurance covers:",choices:["Damage from any water that enters the home","Overflow of inland or tidal waters and unusual accumulation of surface water from any source","Sewer backup and drain overflow only","All water damage including leaking pipes"],answer:1,exp:"NFIP defines flood as overflow of inland or tidal waters and unusual surface water accumulation. Sewer backup and drain overflow are not covered unless water from a general flood condition causes them."},
+
+// ===== CATEGORY 3: CASUALTY/LIABILITY INSURANCE (~25%) =====
+{id:49,cat:"Casualty/Liability Insurance",sub:"Personal Auto",q:"The Personal Auto Policy (PAP) is divided into which main coverage parts?",choices:["Liability, Medical Payments, UM/UIM, and Physical Damage","Bodily Injury, Property Damage, and Collision only","Comprehensive, Collision, and Liability only","Liability and Workers Compensation only"],answer:0,exp:"The PAP consists of Part A (Liability), Part B (Medical Payments), Part C (Uninsured/Underinsured Motorists), and Part D (Physical Damage including Comprehensive and Collision)."},
+{id:50,cat:"Casualty/Liability Insurance",sub:"Personal Auto",q:"Under the PAP, who qualifies as an 'insured' for Part A (Liability) purposes?",choices:["Only the named insured while driving the covered auto","The named insured, resident relatives, and any person using the covered auto with permission","Only persons specifically listed on the policy","Only the named insured and their spouse"],answer:1,exp:"Part A liability covers the named insured, resident relatives, and permissive users of covered autos. This broad definition ensures coverage for all those driving with the named insured's permission."},
+{id:51,cat:"Casualty/Liability Insurance",sub:"Personal Auto",q:"Collision coverage under the PAP pays for damage to the covered auto resulting from:",choices:["Theft of the vehicle","Striking another vehicle or object, or rolling over","Any peril except flood and theft","Fire and explosion damage"],answer:1,exp:"Collision covers damage to the insured's auto from impact with another vehicle or object, or from the vehicle rolling over, regardless of who is at fault."},
+{id:52,cat:"Casualty/Liability Insurance",sub:"Personal Auto",q:"Under PAP, Comprehensive (Other Than Collision) coverage pays for:",choices:["Collision damage with other vehicles","Non-collision losses such as fire, theft, vandalism, hail, flood, and hitting an animal","Windshield damage only","All perils with absolutely no exclusions"],answer:1,exp:"Comprehensive (Part D) covers physical damage losses to the covered auto excluding collision—including fire, theft, glass breakage, hail, flood, falling objects, and contact with animals."},
+{id:53,cat:"Casualty/Liability Insurance",sub:"Personal Auto",q:"Uninsured Motorist (UM) coverage protects the insured when:",choices:["The insured drives without insurance","The insured is injured by a driver who has no auto liability insurance","The insured's car is uninsured and involved in an accident","The other driver carries too much insurance"],answer:1,exp:"UM coverage pays the insured's bodily injury damages when the at-fault driver has no auto liability insurance or is a hit-and-run driver."},
+{id:54,cat:"Casualty/Liability Insurance",sub:"General Liability",q:"A Commercial General Liability (CGL) policy provides coverage for:",choices:["Physical damage to the insured's own property","Bodily injury or property damage to third parties for which the insured becomes legally liable","Workers compensation claims from employees","Auto liability for company vehicles"],answer:1,exp:"CGL covers an insured's legal liability for bodily injury (BI) and property damage (PD) to third parties, as well as personal and advertising injury, arising from business operations."},
+{id:55,cat:"Casualty/Liability Insurance",sub:"General Liability",q:"Products liability coverage under the CGL policy covers:",choices:["Damage to the insured's product itself","BI or PD caused by the insured's products after they leave the insured's premises","Theft of business inventory","Product recall costs and expenses"],answer:1,exp:"Products-Completed Operations coverage under CGL protects the insured for BI or PD caused by their products after being sold or by completed work after it leaves the insured's control."},
+{id:56,cat:"Casualty/Liability Insurance",sub:"Workers Compensation",q:"Workers compensation insurance provides benefits to:",choices:["Employers injured by employees","Employees for job-related injuries and diseases, regardless of fault","Customers injured on business premises","Employees for non-work-related injuries"],answer:1,exp:"Workers comp is a no-fault system paying medical expenses and disability income to employees injured in the course and scope of employment, regardless of who caused the accident."},
+{id:57,cat:"Casualty/Liability Insurance",sub:"Workers Compensation",q:"In Texas, workers compensation insurance is:",choices:["Mandatory for all employers with 5 or more employees","Optional for most private employers (Texas is the only state where it is elective)","Required for all employers with interstate commerce","Administered exclusively by a state fund"],answer:1,exp:"Texas is unique—it is the only state that does not require private employers to carry workers compensation. Employers who opt out lose certain legal defenses and are exposed to tort lawsuits."},
+{id:58,cat:"Casualty/Liability Insurance",sub:"Professional Liability",q:"Errors and Omissions (E&O) insurance covers:",choices:["Intentional wrongful acts by professionals","Negligent acts, errors, or omissions in professional services that cause financial harm to clients","Bodily injury caused by professionals during service","Property damage at the professional's office"],answer:1,exp:"E&O (professional liability) covers financial losses clients suffer due to mistakes or omissions in professional services—coverage applies to unintentional acts the professional did not mean to be harmful."},
+{id:59,cat:"Casualty/Liability Insurance",sub:"General Liability",q:"An umbrella/excess liability policy provides:",choices:["Coverage that replaces the underlying primary policy","Additional coverage above the limits of underlying primary liability policies","Coverage for perils excluded from primary policies","First-dollar coverage with no deductible"],answer:1,exp:"Umbrella policies provide coverage above and beyond the limits of underlying liability policies (auto, homeowners, CGL). They may also drop down to cover some gaps in underlying coverage."},
+{id:60,cat:"Casualty/Liability Insurance",sub:"Personal Auto",q:"The split limit '100/300/100' in auto liability means:",choices:["$100 per claim, $300 deductible, $100 minimum","$100,000 per person BI / $300,000 per occurrence BI / $100,000 property damage","$100,000 total coverage for all claims combined","$300,000 for all bodily injury with a $100,000 deductible"],answer:1,exp:"Split limits express: $100,000 maximum per injured person / $300,000 maximum per accident for all persons / $100,000 maximum for property damage per accident."},
+{id:61,cat:"Casualty/Liability Insurance",sub:"General Liability",q:"The CGL 'claims-made' coverage trigger means:",choices:["Coverage applies when the injury or damage occurs","Coverage applies when the claim is first made during the policy period","Coverage applies only to claims filed in court","Coverage applies to claims made by the insurer against the insured"],answer:1,exp:"Claims-made policies cover claims first reported during the policy period, regardless of when the underlying act occurred (subject to the retroactive date). Occurrence policies cover events when they happen."},
+{id:62,cat:"Casualty/Liability Insurance",sub:"Commercial Auto",q:"The Business Auto Policy (BAP) covers:",choices:["Only autos owned by the business","Business-owned, hired, and non-owned autos depending on symbols selected","Personal autos used for business","Autos used exclusively for employee commuting"],answer:1,exp:"The BAP uses numbered symbols (1-19) to define which autos are covered. Symbol 1 (Any Auto) provides broadest coverage including owned, hired, and non-owned autos."},
+{id:63,cat:"Casualty/Liability Insurance",sub:"Professional Liability",q:"Directors and Officers (D&O) liability insurance covers:",choices:["Injuries to directors and officers at the workplace","Wrongful acts by directors and officers in managing the corporation, leading to financial loss","Property damage caused by corporate management","Auto accidents involving corporate officers"],answer:1,exp:"D&O covers actual or alleged wrongful acts (negligence, breach of duty, errors) by directors and officers in their management capacity that result in financial loss to shareholders or the company."},
+{id:64,cat:"Casualty/Liability Insurance",sub:"General Liability",q:"'Completed Operations' coverage under CGL protects against:",choices:["Injuries during ongoing construction work","BI or PD arising from work that has been completed and accepted by the customer","Employee injuries after completing a project","Property damage to completed goods in a warehouse"],answer:1,exp:"Completed Operations coverage protects contractors and similar businesses against claims arising from work they have finished and turned over to the client, after the work has been accepted."},
+{id:65,cat:"Casualty/Liability Insurance",sub:"Personal Auto",q:"Medical Payments coverage (Part B) under the PAP pays for:",choices:["Liability damages to others injured by the insured","Reasonable medical expenses for the insured and passengers, regardless of fault","Only the insured's medical expenses when at fault","Long-term disability income"],answer:1,exp:"Med Pay (Part B) covers reasonable medical and funeral expenses for the named insured and family members injured while occupying covered autos, and for anyone in the covered auto, regardless of fault."},
+{id:66,cat:"Casualty/Liability Insurance",sub:"General Liability",q:"Which of the following is NOT covered under the standard CGL policy?",choices:["Bodily injury to a visitor on business premises","Property damage caused by business operations","Bodily injury to an employee from a work-related injury","Personal injury from advertising activities"],answer:2,exp:"Employee bodily injuries from work are excluded from CGL because they are covered under Workers Compensation insurance. The employer's liability exposure is handled under a WC&EL policy."},
+{id:67,cat:"Casualty/Liability Insurance",sub:"Personal Auto",q:"The PAP excludes coverage for a vehicle used as a 'public or livery conveyance,' which means:",choices:["Vehicles driven on public roads","Vehicles used to transport people for hire (e.g., Uber/Lyft) without a rideshare endorsement","Vehicles owned by the government","Vehicles that require a commercial driver's license"],answer:1,exp:"Standard personal auto policies exclude liability while the covered vehicle is being used as a public or livery conveyance (transporting passengers for hire). A rideshare endorsement or commercial auto policy is needed."},
+{id:68,cat:"Casualty/Liability Insurance",sub:"Workers Compensation",q:"Workers compensation benefits typically include all of the following EXCEPT:",choices:["Medical expense benefits","Disability income (temporary and permanent)","Pain and suffering damages","Death and survivor benefits"],answer:2,exp:"Workers comp is a no-fault statutory system with specific benefits—medical, disability income, and death benefits. Pain and suffering damages are not recoverable under WC; they require a tort lawsuit."},
+{id:69,cat:"Texas Laws & Regulations",sub:"TDI & Licensing",q:"The Texas Department of Insurance (TDI) is responsible for:",choices:["Setting all insurance premiums in Texas","Regulating the insurance industry, licensing agents, and enforcing the Texas Insurance Code","Paying claims when insurers become insolvent","Writing insurance policies for state employees"],answer:1,exp:"TDI regulates the insurance industry in Texas including licensing agents and companies, approving policy forms and rates, and enforcing the Texas Insurance Code to protect consumers."},
+{id:70,cat:"Texas Laws & Regulations",sub:"TDI & Licensing",q:"In Texas, a General Lines Property and Casualty (P&C) license allows an agent to:",choices:["Sell life and health insurance only","Sell property and casualty insurance products including auto, homeowners, and commercial lines","Sell all lines of insurance without restriction","Sell only personal lines insurance to individuals"],answer:1,exp:"A General Lines P&C license authorizes an agent to sell, solicit, and negotiate property and casualty insurance products including auto, homeowners, commercial property, and liability lines."},
+{id:71,cat:"Texas Laws & Regulations",sub:"TDI & Licensing",q:"To obtain a General Lines P&C license in Texas, a candidate must:",choices:["Have a college degree in finance","Pass the required examination and submit to a criminal background check","Work for 3 years as an insurance agent first","Be sponsored by a Texas insurance company"],answer:1,exp:"Texas requires candidates to pass the state licensing examination administered by Pearson VUE and submit to a fingerprint-based criminal background check before a license is issued."},
+{id:72,cat:"Texas Laws & Regulations",sub:"TDI & Licensing",q:"How often must a Texas insurance agent's license be renewed?",choices:["Every year","Every 2 years","Every 5 years","Licenses are permanent once issued"],answer:1,exp:"Texas insurance licenses must be renewed every 2 years. Renewal requires completing continuing education (CE) requirements, typically 24 hours including specific mandatory topics."},
+{id:73,cat:"Texas Laws & Regulations",sub:"Unfair Trade Practices",q:"Which of the following is an example of 'twisting' in insurance?",choices:["Selling two policies to the same customer","Convincing a policyholder to cancel a policy and buy a new one by misrepresenting the benefits","Charging different premiums to different customers","Refusing to sell insurance to a qualified applicant"],answer:1,exp:"Twisting is the illegal practice of inducing an insured to replace a policy through misrepresentation of facts or by making incomplete or misleading comparisons of policies."},
+{id:74,cat:"Texas Laws & Regulations",sub:"Unfair Trade Practices",q:"'Churning' in the insurance context refers to:",choices:["Generating excessive commissions by repeatedly replacing a client's policies through misrepresentation","Selling insurance to customers who do not need it","Denying valid claims to generate profit","Sharing commissions with unlicensed individuals"],answer:0,exp:"Churning involves replacing policies—often the insured's own policies—to generate additional commissions, usually to the insured's detriment. It is both an unfair trade practice and potentially criminal."},
+{id:75,cat:"Texas Laws & Regulations",sub:"Unfair Trade Practices",q:"Under Texas law, 'rebating' occurs when an agent:",choices:["Returns premium to the company after a policy is cancelled","Offers a portion of the commission or anything of value as an inducement to buy insurance","Charges more premium than the filed rate","Recommends a policy with excessive benefits"],answer:1,exp:"Rebating is the illegal practice of giving or offering to give a portion of the commission or other valuable consideration as an inducement to purchase insurance. It is prohibited under the Texas Insurance Code."},
+{id:76,cat:"Texas Laws & Regulations",sub:"Claims Handling",q:"Under Texas prompt payment of claims rules, an insurer must acknowledge receipt of a claim within:",choices:["7 days","15 business days","30 days","60 days"],answer:1,exp:"Texas Insurance Code requires insurers to acknowledge receipt of a claim within 15 days of receiving written notice, begin investigation promptly, and accept or deny within 15 business days after receiving all items."},
+{id:77,cat:"Texas Laws & Regulations",sub:"Claims Handling",q:"If an insurer fails to accept or reject a claim within the required timeframe in Texas, the insurer may be liable for:",choices:["Only the claim amount","The claim amount plus 18% annual interest and attorney's fees","Only attorney's fees","A $500 penalty to the state"],answer:1,exp:"Texas Insurance Code Section 542 provides that if an insurer violates the prompt payment statute, it owes 18% annual interest on the claim amount plus reasonable attorney's fees."},
+{id:78,cat:"Texas Laws & Regulations",sub:"Cancellation & Nonrenewal",q:"In Texas, after a personal auto policy has been in force for more than 60 days, the insurer may cancel for:",choices:["Any reason with 30 days notice","Only specific statutory reasons including nonpayment, fraud, or loss of driver's license","Rate increases that exceed 25%","Changes in credit score only"],answer:1,exp:"After the 60-day underwriting period, Texas law severely restricts mid-term cancellation of personal auto policies. Permissible reasons include nonpayment, fraud, DL suspension/revocation, and a few others."},
+{id:79,cat:"Texas Laws & Regulations",sub:"Cancellation & Nonrenewal",q:"Texas law requires that notice of cancellation for a personal auto policy (for other than nonpayment) be provided:",choices:["5 days in advance","10 days in advance","30 days in advance","60 days in advance"],answer:2,exp:"Texas Insurance Code requires 30 days advance written notice of cancellation for personal auto policies (except nonpayment of premium, which requires only 10 days notice)."},
+{id:80,cat:"Texas Laws & Regulations",sub:"TDI & Licensing",q:"The Texas FAIR Plan Association provides:",choices:["Workers compensation for state employees","Basic property insurance for property owners who cannot obtain coverage in the voluntary market","Auto insurance for high-risk drivers","Life insurance for uninsurable individuals"],answer:1,exp:"The Texas FAIR Plan provides basic residential and commercial property coverage for property owners unable to obtain coverage in the standard market. FAIR stands for Fair Access to Insurance Requirements."},
+{id:81,cat:"Texas Laws & Regulations",sub:"Financial Responsibility",q:"Under the Texas Motor Vehicle Safety Responsibility Act, which of the following is an acceptable alternative to carrying auto liability insurance?",choices:["A letter from your employer stating they will pay damages","A surety bond of at least $55,000 filed with the state","A signed statement from a licensed attorney","Membership in the AAA automobile club"],answer:1,exp:"Texas allows proof of financial responsibility through: (1) an auto liability insurance policy, (2) a $55,000 surety bond, (3) a deposit of $55,000 cash/securities with the Comptroller, or (4) self-insurance certificate for fleet owners with 25+ vehicles."},
+{id:82,cat:"Texas Laws & Regulations",sub:"Financial Responsibility",q:"Texas's current minimum auto liability limits are:",choices:["25/50/25","30/60/25","50/100/50","100/300/100"],answer:1,exp:"Texas requires minimum auto liability insurance of $30,000 per person bodily injury, $60,000 per occurrence bodily injury, and $25,000 property damage (30/60/25)."},
+{id:83,cat:"Texas Laws & Regulations",sub:"Surplus Lines",q:"A surplus lines insurer in Texas is:",choices:["A company licensed and admitted in Texas for standard risks","An unlicensed (non-admitted) insurer that covers risks the standard market will not write","A company that insures only surplus goods","A reinsurance company that operates in Texas"],answer:1,exp:"Surplus lines insurers are non-admitted carriers not licensed in Texas but eligible to write coverage for unusual, high-risk, or hard-to-place risks unavailable in the admitted market."},
+{id:84,cat:"Texas Laws & Regulations",sub:"Surplus Lines",q:"A surplus lines policy in Texas can be placed only when:",choices:["The insured specifically requests it","The risk cannot be placed with admitted carriers after a diligent search (typically three declinations)","The premium exceeds $10,000","The insured operates in multiple states"],answer:1,exp:"Surplus lines placement requires a diligent effort demonstrating that coverage is unavailable in the standard admitted market, typically evidenced by declinations from three admitted carriers."},
+{id:85,cat:"Texas Laws & Regulations",sub:"TDI & Licensing",q:"An insurance agent who acts with 'binding authority' means:",choices:["The agent can negotiate and change policy terms at will","The agent has authority to commit the insurer to coverage immediately on behalf of the company","The agent can deny claims","The agent is legally liable for all claims paid"],answer:1,exp:"Binding authority allows an agent to immediately commit the insurer to coverage by issuing a binder, without prior approval from the company for each individual transaction."},
+{id:86,cat:"Texas Laws & Regulations",sub:"Unfair Trade Practices",q:"Which of the following is considered an unfair claims settlement practice under Texas law?",choices:["Requesting medical records relevant to a claim","Misrepresenting policy provisions to avoid paying a valid claim","Asking for a signed proof of loss","Investigating a claim before payment"],answer:1,exp:"Misrepresenting policy provisions to deny or reduce a valid claim is an unfair claims settlement practice under the Texas Insurance Code and the NAIC Unfair Claims Settlement Practices Act."},
+{id:87,cat:"Texas Laws & Regulations",sub:"TDI & Licensing",q:"Under Texas law, an agent's fiduciary duty to the client includes:",choices:["Placing the insurer's interests above the client's","Acting in the best interest of the client and handling client funds honestly","Sharing client information with other agents","Recommending only the most expensive policies"],answer:1,exp:"Insurance agents in Texas have a fiduciary duty to act in the client's best interest, handle premium funds appropriately, and avoid conflicts of interest."},
+{id:88,cat:"Texas Laws & Regulations",sub:"Cancellation & Nonrenewal",q:"A Texas homeowners insurer must provide how many days advance notice of nonrenewal?",choices:["10 days","15 days","30 days","60 days"],answer:3,exp:"Texas Insurance Code requires homeowners insurers to provide at least 60 days advance notice of nonrenewal for policies in effect for more than 90 days. This gives the insured time to obtain replacement coverage."},
+{id:116,cat:"Casualty/Liability Insurance",sub:"General Liability",q:"The 'personal and advertising injury' coverage in CGL covers:",choices:["Physical injuries to persons during advertising campaigns","Offenses such as libel, slander, false arrest, and copyright infringement in advertising","Product liability claims","Injury to employees caused by advertising displays"],answer:1,exp:"Personal and advertising injury covers specific intentional torts including false arrest, malicious prosecution, libel, slander, defamation, and copyright infringement in the insured's advertisements."},
+{id:117,cat:"Casualty/Liability Insurance",sub:"Personal Auto",q:"Underinsured Motorist (UIM) coverage applies when:",choices:["The insured is driving an underinsured vehicle","The at-fault driver's liability limits are less than the insured's damages","The insured does not carry enough coverage","The at-fault driver has no insurance at all"],answer:1,exp:"UIM coverage pays the difference between the insured's damages and the at-fault driver's liability limits when those limits are insufficient to fully compensate the insured's losses."},
+{id:118,cat:"Casualty/Liability Insurance",sub:"Commercial Auto",q:"'Hired and Non-Owned Auto' coverage under the BAP covers:",choices:["Autos owned by the business","Autos rented by the business and employees' personal autos used for business","All autos within a 50-mile radius","Autos hired for personal use by employees"],answer:1,exp:"Hired autos are vehicles rented or leased for business. Non-owned autos are those owned by employees or others used for business purposes. Both create significant liability exposure for the business."},
+{id:119,cat:"Casualty/Liability Insurance",sub:"Professional Liability",q:"Medical malpractice insurance is a type of:",choices:["General liability insurance","Professional liability (E&O) insurance","Workers compensation","Product liability insurance"],answer:1,exp:"Medical malpractice is professional liability insurance for healthcare providers, covering claims arising from negligent acts or omissions in providing professional medical services."},
+{id:120,cat:"Casualty/Liability Insurance",sub:"Workers Compensation",q:"The 'experience modification factor' (e-mod) in workers compensation is used to:",choices:["Set the state minimum premium","Adjust the premium based on the employer's actual loss history compared to expected losses for that class","Determine the number of employees covered","Calculate the cost of individual medical claims"],answer:1,exp:"The e-mod adjusts WC premiums based on historical loss experience. An e-mod below 1.0 means better-than-average losses (premium credit); above 1.0 means worse-than-average (premium debit)."},
+{id:121,cat:"Casualty/Liability Insurance",sub:"General Liability",q:"What is the 'per occurrence' limit in a CGL policy?",choices:["The maximum paid per injured person","The maximum the insurer will pay for all damages arising from a single occurrence","The total the insurer will pay over the entire policy period","The deductible amount per claim"],answer:1,exp:"The per occurrence limit is the maximum amount the insurer will pay for all claims (BI, PD, personal injury) arising from a single occurrence or accident."},
+{id:122,cat:"Casualty/Liability Insurance",sub:"General Liability",q:"The 'general aggregate' limit in a CGL policy is:",choices:["The maximum per-claim limit","The maximum the insurer will pay for all covered losses during the policy period (excluding products/completed ops aggregate)","The same as the per occurrence limit","The total of all underlying policy limits"],answer:1,exp:"The general aggregate is the total maximum the insurer will pay during the entire policy period for all qualifying claims, except products/completed operations which has its own separate aggregate."},
+{id:123,cat:"Casualty/Liability Insurance",sub:"Personal Auto",q:"Which vehicle is typically covered under a standard PAP?",choices:["A motorcycle owned by the named insured","A private passenger automobile owned by the named insured","A vehicle with a GVWR over 10,000 lbs used for business","A snowmobile used year-round"],answer:1,exp:"The PAP covers private passenger autos and pickups/vans. Motorcycles, large commercial vehicles, and off-road vehicles require separate policies or endorsements."},
+
+// Additional questions to fill gaps (IDs 89-99, 124-143)
+// These go BEFORE questions3.js in concatenation
+{id:89,cat:"Texas Laws & Regulations",sub:"Claims Handling",q:"Under Texas law, when an insurer denies a claim, it must notify the claimant in writing within how many business days of the denial decision?",choices:["5 business days","15 business days","30 days","60 days"],answer:1,exp:"Texas Insurance Code Chapter 542 requires insurers to notify claimants in writing of claim denial within 15 business days of the denial decision, including the specific reasons for denial."},
+{id:90,cat:"Texas Laws & Regulations",sub:"TDI & Licensing",q:"An agent who works for only one insurance company and is authorized only to sell that company's products is known as a(n):",choices:["Independent agent","Captive (exclusive) agent","Surplus lines agent","Managing general agent"],answer:1,exp:"Captive (exclusive) agents represent only one insurer and sell only that company's products. Independent agents represent multiple insurers and can shop for the best coverage for clients."},
+{id:91,cat:"Texas Laws & Regulations",sub:"TDI & Licensing",q:"An independent insurance agent in Texas:",choices:["Can only represent one insurance company","Can represent multiple insurance companies and place coverage with any of them","Must be employed by a Texas insurance company","Is exempt from licensing requirements"],answer:1,exp:"Independent agents are licensed professionals who represent multiple insurers. They can compare products from different companies to find the best fit for their clients, earning commissions from each company."},
+{id:92,cat:"Texas Laws & Regulations",sub:"Unfair Trade Practices",q:"'Defamation' as an unfair trade practice in insurance involves:",choices:["Charging excessive premiums","Making false statements that harm the reputation of a competitor or its products","Selling coverage to ineligible applicants","Filing false claims"],answer:1,exp:"Defamation as an unfair trade practice means making or disseminating untrue, derogatory statements about the financial condition or the products of a competing insurance company."},
+{id:93,cat:"Texas Laws & Regulations",sub:"TDI & Licensing",q:"The Texas Insurance Code requires insurance companies to file all rates and policy forms with TDI. This requirement ensures:",choices:["That all premiums are identical across companies","That rates are adequate, not excessive, and not unfairly discriminatory","That all companies charge the same premium","That rates are set by a government committee"],answer:1,exp:"Rate filing requirements ensure that insurance rates meet the tripartite test: adequate (to pay claims), not excessive (not gouging consumers), and not unfairly discriminatory (not based on improper factors)."},
+{id:94,cat:"Texas Laws & Regulations",sub:"Cancellation & Nonrenewal",q:"In Texas, which of the following requires only 10 days notice of cancellation?",choices:["Cancellation for any underwriting reason","Cancellation for nonpayment of premium","Cancellation due to loss of driver's license","Cancellation for material misrepresentation"],answer:1,exp:"Nonpayment of premium is the one reason requiring only 10 days advance written notice of cancellation. All other permitted cancellation reasons require 30 days notice for personal auto policies."},
+{id:95,cat:"Texas Laws & Regulations",sub:"Surplus Lines",q:"The surplus lines premium tax in Texas is currently:",choices:["0%","4.85%","10%","15%"],answer:1,exp:"Texas imposes a 4.85% premium tax on surplus lines insurance premiums. This tax is collected by the surplus lines agent and remitted to the Surplus Lines Stamping Office of Texas (SLSOT)."},
+{id:96,cat:"Texas Laws & Regulations",sub:"TDI & Licensing",q:"A person who for compensation investigates and settles claims for insurers in Texas must be licensed as a(n):",choices:["Insurance agent","Public adjuster","Independent adjuster","Insurance examiner"],answer:2,exp:"Independent (or company) adjusters who investigate and settle claims for insurers must be licensed by TDI. Public adjusters represent policyholders (not insurers) and also require separate licensing."},
+{id:97,cat:"Texas Laws & Regulations",sub:"TDI & Licensing",q:"A public adjuster in Texas represents:",choices:["The insurance company in claim negotiations","The insured (policyholder) in claim negotiations against the insurer","TDI in dispute resolution","Both the insured and insurer equally"],answer:1,exp:"Public adjusters are licensed professionals hired by and representing the policyholder to negotiate with the insurer on the insured's behalf, typically for a percentage of the claim payment."},
+{id:98,cat:"Texas Laws & Regulations",sub:"Financial Responsibility",q:"Texas's TexasSure vehicle insurance verification system allows:",choices:["Automatic claim filing","Law enforcement and DMV to electronically verify a vehicle has required liability insurance","Free insurance for uninsured drivers","Automatic rate adjustments"],answer:1,exp:"TexasSure is an electronic database allowing law enforcement officers and the DMV to verify in real time whether a registered vehicle has the required minimum auto liability insurance coverage."},
+{id:99,cat:"Texas Laws & Regulations",sub:"TDI & Licensing",q:"Insurance agents in Texas are required to disclose to applicants:",choices:["Their compensation from all insurers","Any material conflict of interest that could affect their recommendation","The exact loss ratios of insurers they represent","The names of all other clients they represent"],answer:1,exp:"Texas agents must disclose any material conflicts of interest that could affect the agent's recommendation to an applicant, ensuring the client can make an informed decision."},
+{id:124,cat:"Texas Laws & Regulations",sub:"TDI & Licensing",q:"What is the minimum age requirement to obtain a Texas insurance agent license?",choices:["16 years old","18 years old","21 years old","25 years old"],answer:1,exp:"Texas requires an applicant for an insurance license to be at least 18 years of age to apply for any insurance producer license."},
+{id:125,cat:"Texas Laws & Regulations",sub:"TDI & Licensing",q:"Which of the following would disqualify an applicant from obtaining a Texas insurance license?",choices:["Holding a license in another state","A felony conviction involving dishonesty or breach of trust","Working for a competing insurance company","Being a recent college graduate"],answer:1,exp:"A felony conviction involving dishonesty or breach of trust is grounds for license denial under Texas Insurance Code and federal law (18 U.S.C. Section 1033), which prohibits such persons from insurance activities."},
+{id:126,cat:"Texas Laws & Regulations",sub:"Unfair Trade Practices",q:"'Misrepresentation' as an unfair trade practice in Texas includes:",choices:["Quoting accurate premium amounts","Making false or misleading statements about policy terms or competitor's policies to induce a sale","Providing written policy summaries to clients","Offering multiple coverage options"],answer:1,exp:"Misrepresentation includes making false or misleading statements about the terms, benefits, or comparisons of insurance policies to induce the purchase or replacement of insurance."},
+{id:127,cat:"Texas Laws & Regulations",sub:"TDI & Licensing",q:"When a Texas licensed agent changes their mailing address, they must notify TDI within:",choices:["10 days","30 days","60 days","90 days"],answer:1,exp:"Texas Insurance Code requires licensees to notify TDI of a change of address within 30 days of the change. Failure to maintain a current address on file can result in license issues."},
+{id:128,cat:"Texas Laws & Regulations",sub:"Cancellation & Nonrenewal",q:"Under Texas law, an insurer may cancel a homeowners policy mid-term after the initial 60-day underwriting period for:",choices:["Any reason with 30 days notice","Only fraud, misrepresentation, nonpayment, or if the property becomes uninsurable","Changes in the homeowner's credit score","Any underwriting reason with 90 days notice"],answer:1,exp:"After the initial 60-day underwriting period, Texas restricts mid-term cancellation of homeowners policies to specific statutory reasons: fraud, material misrepresentation, nonpayment, or the property becoming uninsurable."},
+{id:129,cat:"Texas Laws & Regulations",sub:"Financial Responsibility",q:"A Texas driver who fails to maintain required auto liability insurance may face:",choices:["Only a $50 fine","Fines, driver's license suspension, and vehicle registration suspension","Only a warning for a first offense","Criminal prosecution only"],answer:1,exp:"Texas drivers without proof of financial responsibility face escalating fines ($175+ first offense), driver's license suspension, vehicle registration suspension, and surcharges under the Driver Responsibility Program."},
+{id:130,cat:"Texas Laws & Regulations",sub:"TDI & Licensing",q:"Continuing Education (CE) requirements for Texas P&C agents include how many hours per 2-year renewal period?",choices:["12 hours","18 hours","24 hours","36 hours"],answer:2,exp:"Texas P&C agents must complete 24 hours of approved CE per 2-year license period, including required courses on ethics (3 hours) and other mandated topics."},
+{id:131,cat:"Texas Laws & Regulations",sub:"Unfair Trade Practices",q:"'Sliding' as an unfair insurance practice refers to:",choices:["Reducing the premium on a policy without authorization","Adding unauthorized coverages or products to a policy without the insured's informed consent","Switching a client to a lower-rated insurer","Giving discounts not filed with TDI"],answer:1,exp:"Sliding is adding unauthorized or unwanted coverage to a policy without the applicant's informed consent, often buried in paperwork the insured signs without understanding what they are agreeing to."},
+{id:132,cat:"Texas Laws & Regulations",sub:"Claims Handling",q:"Texas requires an insurer to pay or deny a claim within how many business days after receiving all required documentation?",choices:["5 business days","15 business days","30 business days","60 days"],answer:1,exp:"Under Texas Insurance Code Chapter 542, an insurer must accept or deny a claim within 15 business days of receiving all required items. If accepted, payment must follow within 5 business days."},
+{id:133,cat:"Texas Laws & Regulations",sub:"TDI & Licensing",q:"An insurance company's Certificate of Authority in Texas authorizes it to:",choices:["Set its own rates without filing","Write insurance in the lines specified, in Texas, as an admitted insurer","Handle claims for any insurer","Represent surplus lines insurers"],answer:1,exp:"A Certificate of Authority (COA) from TDI allows an insurer to legally write insurance in Texas as an admitted carrier for the lines of insurance specified in the certificate."},
+{id:134,cat:"Texas Laws & Regulations",sub:"Surplus Lines",q:"Surplus lines policies in Texas are filed with:",choices:["The federal government","The Surplus Lines Stamping Office of Texas (SLSOT)","Any TDI office","The Comptroller of Public Accounts only"],answer:1,exp:"Surplus lines agents must file policies and pay the premium tax through the Surplus Lines Stamping Office of Texas (SLSOT), which reviews filings for compliance with Texas surplus lines regulations."},
+{id:135,cat:"Texas Laws & Regulations",sub:"Cancellation & Nonrenewal",q:"In Texas, for nonpayment of premium cancellation on a personal auto policy, the minimum advance notice required is:",choices:["5 days","10 days","20 days","30 days"],answer:1,exp:"Texas requires only 10 days advance written notice for cancellation due to nonpayment of premium on personal auto policies. All other permitted cancellation reasons require 30 days notice."},
+{id:136,cat:"Texas Laws & Regulations",sub:"TDI & Licensing",q:"Which of the following is true about selling insurance without a license in Texas?",choices:["It is permitted if supervised by a licensed agent","It is a violation that can result in fines and criminal penalties","It is allowed for administrative staff processing applications","It is only prohibited for life insurance"],answer:1,exp:"Selling, soliciting, or negotiating insurance without a license in Texas is a violation of the Texas Insurance Code subject to fines, cease and desist orders, and potentially criminal prosecution."},
+{id:137,cat:"Texas Laws & Regulations",sub:"Unfair Trade Practices",q:"Under the Texas Unfair Claims Settlement Practices Act, which of the following is a prohibited practice?",choices:["Requesting medical records relevant to a claim","Failing to promptly acknowledge communications about a claim","Conducting a thorough investigation","Explaining the reasons for a claim denial in writing"],answer:1,exp:"The Act prohibits unfair practices including failing to promptly acknowledge claim communications, misrepresenting policy provisions, refusing to pay without reasonable investigation, and compelling unnecessary litigation."},
+{id:138,cat:"Texas Laws & Regulations",sub:"TDI & Licensing",q:"In Texas, an 'insurance producer' includes:",choices:["Only agents who sell policies","Agents, brokers, and solicitors—anyone who sells, solicits, or negotiates insurance for compensation","Only employees of insurance companies","Only independent agents"],answer:1,exp:"Texas Insurance Code defines 'insurance producer' broadly to include any person who sells, solicits, or negotiates insurance contracts for compensation, requiring licensure regardless of specific title."},
+{id:139,cat:"Texas Laws & Regulations",sub:"Financial Responsibility",q:"The Texas Personal Automobile Insurance Plan (PAIP) provides:",choices:["Free auto insurance for low-income Texans","Auto liability insurance for high-risk drivers who cannot obtain coverage in the voluntary market","Comprehensive coverage for all Texas drivers","No-fault medical payments for all accident victims"],answer:1,exp:"The PAIP (assigned risk plan) ensures that high-risk drivers who cannot obtain coverage in the standard market can still access the minimum required auto liability coverage in Texas."},
+{id:140,cat:"Texas Laws & Regulations",sub:"TDI & Licensing",q:"An insurance company seeking to write business in Texas must:",choices:["Be incorporated in Texas","Obtain a Certificate of Authority from TDI and meet financial requirements","Pay a flat fee of $50,000 to TDI","Have at least 1,000 Texas policyholders first"],answer:1,exp:"All insurers writing business in Texas must obtain a Certificate of Authority (COA) from TDI and meet capital, surplus, and other financial requirements established by the Texas Insurance Code."},
+{id:141,cat:"General Insurance Concepts",sub:"Policy Structure",q:"What is the 'other insurance' clause in a property policy?",choices:["A requirement to have multiple policies","A clause that limits the insurer's liability when other insurance covers the same loss","A provision excluding government-backed insurance","A requirement for the insured to notify other insurers of a claim"],answer:1,exp:"The other insurance clause (contribution clause) determines how the insurer's payment is coordinated when multiple policies cover the same loss, typically requiring each to pay its pro-rata share."},
+{id:142,cat:"Property Insurance",sub:"Homeowners",q:"Under HO-3, Coverage D (Loss of Use) for a rented portion of the home provides:",choices:["Additional Living Expenses for the insured","Fair rental value if the tenant is displaced due to a covered loss","Market value appreciation of the rental unit","Business income replacement for landlords"],answer:1,exp:"For rented portions of the insured property, Coverage D pays the fair rental value lost when a covered loss makes the rented part uninhabitable, covering the landlord's lost rental income during repairs."},
+{id:143,cat:"Casualty/Liability Insurance",sub:"General Liability",q:"The 'contractual liability' exclusion in CGL policies excludes liability assumed in most contracts EXCEPT for:",choices:["All contracts with customers","Specifically defined 'insured contracts' such as leases, railroad sidetrack agreements, and hold harmless agreements in construction contracts","Only oral agreements","All assumed liability regardless of contract type"],answer:1,exp:"CGL excludes most contractual liability, but preserves coverage for 'insured contracts'—specifically defined agreements including leases, easements, and vendor contracts where liability is assumed by written agreement."},
+
+{id:144,cat:"Texas Laws & Regulations",sub:"Cancellation & Nonrenewal",q:"If a Texas insurer nonrenews a homeowners policy, the insured has the right to:",choices:["Sue the insurer immediately","Request a written explanation of the nonrenewal reason from the insurer","File a complaint with the FBI","Demand the insurer continue coverage for 6 months"],answer:1,exp:"Texas Insurance Code gives homeowners policyholders the right to request a written statement of the reason(s) for nonrenewal. The insurer must provide this statement promptly."},
+{id:145,cat:"Property Insurance",sub:"Commercial Property",q:"A 'reporting form' commercial property policy requires the insured to:",choices:["Report all claims immediately","Periodically report actual inventory or property values so the premium reflects current exposure","File annual safety inspections","Report all new property purchases within 30 days"],answer:1,exp:"Reporting form policies are used for fluctuating inventory values. The insured reports actual values monthly or quarterly, and premium is adjusted based on actual reported values rather than estimated values."},
+{id:146,cat:"Casualty/Liability Insurance",sub:"Personal Auto",q:"Under the PAP, which of the following is NOT a covered auto for liability purposes?",choices:["A newly acquired vehicle during the first 30 days","A temporary substitute vehicle used while the covered auto is being repaired","A trailer owned by the named insured","A vehicle used for carrying persons for hire"],answer:3,exp:"Vehicles used to transport persons for hire (taxi, Uber, Lyft without rideshare endorsement) are excluded from standard PAP liability coverage. The other choices are covered autos."},
+{id:147,cat:"Texas Laws & Regulations",sub:"TDI & Licensing",q:"An appointed insurance agent in Texas means:",choices:["The agent has been appointed by the governor","The insurer has authorized the agent to sell its products and has filed an appointment with TDI","The agent has passed a special exam","The agent handles only appointed government accounts"],answer:1,exp:"In Texas, an insurer must file an appointment with TDI authorizing each agent to sell its products. Without an appointment, an agent cannot legally sell that insurer's products."},
+{id:148,cat:"Property Insurance",sub:"Commercial Property",q:"'Spoilage coverage' in a commercial property policy covers:",choices:["Damage to property from pests","Loss of perishable goods due to refrigeration equipment breakdown or temperature changes","Product contamination from bacteria","Spoiled goods returned by customers"],answer:1,exp:"Spoilage coverage protects food service and grocery businesses against loss of refrigerated or perishable goods when refrigeration or temperature-controlled systems fail due to a covered cause."},
+{id:149,cat:"Casualty/Liability Insurance",sub:"General Liability",q:"An 'occurrence policy' provides liability coverage when:",choices:["The claim is made during the policy period","The injury or damage occurs during the policy period, regardless of when the claim is filed","The premium is paid for each occurrence","The occurrence is reported within 30 days"],answer:1,exp:"Occurrence-based policies cover events that happen during the policy period even if the claim is filed years later after the policy has expired, making them broader than claims-made forms."},
+{id:150,cat:"Texas Laws & Regulations",sub:"Unfair Trade Practices",q:"'Controlled business' laws in Texas are designed to prevent:",choices:["Agents from controlling market share","Agents from primarily writing insurance on themselves, their families, or business entities in which they have a financial interest","Agents from handling more than one line of insurance","Companies from controlling agent commissions"],answer:1,exp:"Controlled business restrictions prevent agents from using a license primarily to insure their own interests. Most states require that a substantial portion of an agent's book of business be from unaffiliated clients."},
+{id:151,cat:"General Insurance Concepts",sub:"Policy Structure",q:"An 'occurrence' form of coverage is most appropriate for:",choices:["Policies covering claims that are reported quickly","Long-tail exposures where claims may not surface for years after the injury occurs","Short-term policies under 6 months","Annual premium audits"],answer:1,exp:"Occurrence forms are preferred for long-tail liability exposures (e.g., asbestos, pollution, products) where injuries may not manifest or claims may not be filed until years after the policy period."},
+{id:152,cat:"Property Insurance",sub:"Homeowners",q:"Under an HO-3, which of the following is covered under Coverage A (Dwelling)?",choices:["Trees, plants, and shrubs","Attached garage and built-in appliances","The insured's boat stored in the garage","Fences and detached sheds"],answer:1,exp:"Coverage A covers the dwelling and structures attached to it, including an attached garage, built-in appliances, permanently installed flooring, and similar components of the dwelling structure."},
+{id:153,cat:"Casualty/Liability Insurance",sub:"Workers Compensation",q:"'Employer's Liability' coverage (Part Two of a WC policy) protects against:",choices:["Claims by employees under workers compensation","Tort claims by employees for work injuries who are not covered by WC, or by spouses/dependents","Claims by the government against the employer","Claims from non-employee contractors"],answer:1,exp:"Employer's Liability (EL) covers the employer against negligence claims that arise from work injuries but fall outside the workers comp system—such as claims by spouses or in states without exclusive remedy."},
+{id:154,cat:"Texas Laws & Regulations",sub:"TDI & Licensing",q:"Which entity guarantees payment of claims to Texas policyholders when a member insurer becomes insolvent?",choices:["TDI directly from state funds","The Texas Property and Casualty Insurance Guaranty Association","The federal government through FDIC","The National Association of Insurance Commissioners (NAIC)"],answer:1,exp:"The Texas Property and Casualty Insurance Guaranty Association covers claims of insolvent member insurers up to statutory limits, funded by assessments on admitted property and casualty insurers."},
+{id:155,cat:"Property Insurance",sub:"NFIP/Flood",q:"Under an NFIP policy, the coverage for contents (personal property) is:",choices:["Included automatically with building coverage","A separate coverage option the insured must purchase","Provided automatically up to $100,000","Not available—contents are never covered by NFIP"],answer:1,exp:"NFIP building and contents coverage are separate policies/coverages. Property owners and renters must specifically purchase contents coverage; it is not automatic with a building policy."},
+{id:156,cat:"Casualty/Liability Insurance",sub:"General Liability",q:"The 'expected or intended' exclusion in liability policies eliminates coverage for:",choices:["Unexpected accidents","Damage or injury that the insured intended or expected to occur","Property damage in general","All business activities"],answer:1,exp:"Liability policies cover only accidental injury or damage—losses that are unexpected from the insured's viewpoint. Intentionally caused harm is excluded from coverage."},
+{id:157,cat:"Texas Laws & Regulations",sub:"Claims Handling",q:"The Texas Stowers doctrine relates to:",choices:["An insurer's duty to defend","An insurer's duty to settle within policy limits when it is reasonable to do so, or face excess judgment exposure","An insured's duty to cooperate","TDI's authority to force settlements"],answer:1,exp:"The Stowers doctrine (from G.A. Stowers Furniture Co. v. American Indemnity Co.) holds that an insurer has a duty to accept a reasonable settlement demand within policy limits when a verdict exceeding policy limits is foreseeable."},
+{id:158,cat:"Property Insurance",sub:"Commercial Property",q:"Under the Business Owners Policy (BOP), eligible businesses are typically:",choices:["Large manufacturing facilities","Small-to-medium sized businesses with property values within certain limits","Businesses with more than 100 employees","Only retail stores"],answer:1,exp:"The BOP is designed for small-to-medium businesses meeting eligibility criteria for size, type, and property values. It combines property and liability coverage at a packaged rate."},
+{id:159,cat:"Casualty/Liability Insurance",sub:"Professional Liability",q:"A 'claims-made with tail' (extended reporting period) endorsement for a professional liability policy:",choices:["Extends the coverage territory permanently","Allows claims to be reported to the insurer after the policy expires for incidents that occurred during the policy period","Extends the retroactive date backward","Doubles the policy limits"],answer:1,exp:"A tail endorsement extends the time for reporting claims after the claims-made policy expires. This is crucial for professionals retiring or changing insurers, as claims for past services may arise later."},
+{id:160,cat:"General Insurance Concepts",sub:"Risk",q:"'Self-insurance' is an example of which risk management technique?",choices:["Risk transfer","Risk avoidance","Risk retention","Risk reduction"],answer:2,exp:"Self-insurance is planned risk retention, where an organization sets aside funds to pay its own losses rather than purchasing commercial insurance, retaining the financial consequence of risk."},
+{id:161,cat:"Property Insurance",sub:"Commercial Property",q:"The 'Rule of 80%' in commercial property coinsurance means:",choices:["Insurers pay 80% of all losses","The insured must carry insurance of at least 80% of the replacement cost value of the building","Only 80% of claims are covered","Premiums may not exceed 80% of the property value"],answer:1,exp:"The coinsurance rule requires the insured to carry insurance equal to at least 80% of the replacement cost. Failure results in a proportional reduction in claim payment using the formula: (amount carried / amount required) × loss."},
+{id:162,cat:"Texas Laws & Regulations",sub:"TDI & Licensing",q:"An insurance producer who fails to remit premiums collected from clients to the insurer is guilty of:",choices:["A licensing violation only","Theft or conversion—a criminal offense in addition to licensing violation","Only an ethics violation","Nothing, as long as they remit within 90 days"],answer:1,exp:"Misappropriation of insurance premiums is criminal theft or conversion. Agents hold premiums in a fiduciary capacity and must promptly remit them to the insurer. Failure is both criminal and grounds for license revocation."},
+{id:163,cat:"Casualty/Liability Insurance",sub:"Personal Auto",q:"Which of the following describes 'first party' coverage in auto insurance?",choices:["Coverage for the other driver's damages","Coverage for the insured's own losses (your own injuries, your car damage)","Coverage for third parties not in either car","Coverage for the first person injured in an accident"],answer:1,exp:"First-party coverage pays the insured's own losses: medical payments, comprehensive, collision, and uninsured motorist property damage. Third-party coverage (liability) pays others' losses the insured caused."},
+{id:164,cat:"Property Insurance",sub:"Homeowners",q:"Under a standard HO policy, which personal property has a special sublimit (not the full Coverage C limit)?",choices:["Furniture and clothing","Jewelry, furs, firearms, cash, watercraft, and silverware","All electronics","Kitchen appliances"],answer:1,exp:"HO policies have sublimits for categories such as jewelry ($1,500), furs ($1,500), firearms ($2,500), cash ($200), silverware ($2,500), and watercraft. Scheduling (floater) provides broader, higher-limit coverage."},
+{id:165,cat:"Casualty/Liability Insurance",sub:"Workers Compensation",q:"Workers compensation benefits for permanent total disability typically provide:",choices:["A lump sum payment equal to 10 years of wages","Wage replacement benefits (a percentage of the worker's pre-injury wage) for life or a statutory maximum period","Only medical benefits with no wage replacement","Benefits equal to full pre-injury wages for 2 years"],answer:1,exp:"Permanent Total Disability (PTD) benefits provide ongoing wage replacement (typically 70% of average weekly wage in Texas) for the injured worker's lifetime or until the statutory maximum, plus lifetime medical care."},
+{id:166,cat:"Texas Laws & Regulations",sub:"Financial Responsibility",q:"The Texas Motor Vehicle Safety Responsibility Act requires:",choices:["All vehicles to be inspected annually","Owners and operators of motor vehicles to demonstrate financial responsibility by maintaining liability insurance or an approved alternative","All drivers to carry $500,000 in liability coverage","Vehicles to be registered with proof of insurance annually"],answer:1,exp:"The Texas Motor Vehicle Safety Responsibility Act (Transportation Code Ch. 601) requires drivers and owners to maintain minimum liability insurance coverage or post a bond/deposit as proof of financial responsibility."},
+{id:167,cat:"Property Insurance",sub:"Commercial Property",q:"An 'installation floater' insures:",choices:["Equipment after it is permanently installed","Machinery and equipment during transit to a job site and during the installation process","Only the tools used for installation","Buildings under renovation"],answer:1,exp:"An installation floater covers equipment, machinery, and materials while being transported to a job site and during the installation or testing process, until the equipment is accepted by the owner."},
+{id:168,cat:"Casualty/Liability Insurance",sub:"General Liability",q:"'Premises liability' coverage under CGL covers:",choices:["Only injuries inside the building","Bodily injury or property damage occurring on or arising out of the insured's premises or adjacent areas","Damage to the insured's own premises","All liability regardless of location"],answer:1,exp:"Premises and operations coverage protects against BI/PD occurring on the insured's premises or arising from ongoing business operations at the premises or in the immediate vicinity."},
+{id:169,cat:"Texas Laws & Regulations",sub:"Cancellation & Nonrenewal",q:"Under Texas law, an insured who disagrees with an insurer's decision may file a complaint with:",choices:["The Better Business Bureau only","TDI's Consumer Protection Division","The federal Department of Labor","The NAIC directly"],answer:1,exp:"Texas consumers can file complaints with TDI's Consumer Protection Division (1-800-252-3439), which investigates complaints against licensed insurers and agents operating in Texas."},
+{id:170,cat:"General Insurance Concepts",sub:"Policy Structure",q:"'Notice of loss' provisions in a property policy typically require the insured to notify the insurer:",choices:["Within 24 hours of any loss","As soon as reasonably possible after the loss occurs","Within exactly 30 days","Only if the loss exceeds the deductible"],answer:1,exp:"Property policies require prompt notice—'as soon as reasonably possible' or within a stated period. Late notice may prejudice the insurer's ability to investigate and can result in denial of coverage."},
+{id:171,cat:"Property Insurance",sub:"Homeowners",q:"A 'personal articles floater' or 'scheduled personal property endorsement' provides:",choices:["Broader coverage and higher limits for specifically listed items, often without a deductible","Only liability coverage for personal property","Coverage only when property is at home","Lower coverage than the base HO policy"],answer:0,exp:"Scheduling valuable items (jewelry, art, cameras, collectibles) on a floater provides all-risk coverage, agreed value or appraised value, and typically no deductible—broader than the standard HO sublimits."},
+{id:172,cat:"Casualty/Liability Insurance",sub:"Commercial Auto",q:"'Drive-other-car' (DOC) coverage under a business auto policy covers:",choices:["Business autos driven by any employee","A named individual who drives a non-owned personal auto not covered by any personal auto policy","Customers driving the insured's demo vehicles","Employees' personal autos on weekends"],answer:1,exp:"DOC coverage extends to named individuals (typically corporate officers) who need liability coverage while driving a non-owned vehicle, such as a rental, because they do not own a personal auto with a PAP."},
+{id:173,cat:"Texas Laws & Regulations",sub:"TDI & Licensing",q:"An insurance agent in Texas is required to maintain errors and omissions (E&O) insurance:",choices:["In amounts of at least $1 million","As required by the agency agreement with each appointed insurer","E&O is not required by Texas law for agents","Only for agents with 10 or more years of experience"],answer:2,exp:"Texas does not statutorily require agents to maintain E&O insurance, though many insurers contractually require it through agency agreements. Agents are encouraged to carry E&O as professional protection."},
+{id:174,cat:"Property Insurance",sub:"Commercial Property",q:"Under a commercial property policy, 'period of restoration' is:",choices:["The entire policy period","The time required to repair or replace damaged property with reasonable speed, determining how long BI coverage applies","The time the insurer has to adjust a claim","The waiting period before business income coverage begins"],answer:1,exp:"The period of restoration defines the maximum time business income coverage applies—from the date of the physical loss to the date the property is (or should reasonably be) repaired or replaced."},
+{id:175,cat:"Casualty/Liability Insurance",sub:"General Liability",q:"The 'liquor liability' exclusion in a standard CGL policy excludes coverage for:",choices:["Any business that sells food","Businesses in the liquor trade—manufacturers, distributors, sellers—for BI/PD caused by intoxicated persons","All liquor-related claims for any business","Restaurants that serve alcohol at dinner"],answer:1,exp:"The liquor liability exclusion in CGL applies to those in the business of manufacturing, distributing, selling, or serving alcoholic beverages. These businesses need a separate Liquor Liability (Host Liquor) policy."},
+{id:176,cat:"Texas Laws & Regulations",sub:"Unfair Trade Practices",q:"'Boycott, coercion, or intimidation' as an unfair trade practice includes:",choices:["Competitive pricing strategies","Pressuring agents or insureds through threats, intimidation, or unlawful agreements to restrict competition","Normal business negotiations","Filing complaints with regulatory bodies"],answer:1,exp:"Using boycott, coercion, or intimidation to restrict fair trade or competition in the insurance market is an unfair trade practice under the Texas Insurance Code."},
+{id:177,cat:"General Insurance Concepts",sub:"Fundamental Principles",q:"A 'material misrepresentation' on an insurance application is one that:",choices:["Is made intentionally only","Would have affected the insurer's decision to issue the policy or the premium charged if known","Is more than $1,000 in financial impact","Was made by the agent, not the insured"],answer:1,exp:"A misrepresentation is material if the insurer would have made a different underwriting decision (declined, different terms, higher premium) had they known the truth."},
+{id:178,cat:"Property Insurance",sub:"Inland Marine",q:"A 'contractors equipment floater' covers:",choices:["Buildings under construction","Mobile equipment and tools owned or leased by a contractor that move from job site to job site","Injuries to contractors at a job site","Completed buildings during the warranty period"],answer:1,exp:"A contractors equipment floater covers mobile equipment, tools, and machinery used by contractors (cranes, bulldozers, saws) wherever they are located, protecting against physical loss or damage."},
+{id:179,cat:"Casualty/Liability Insurance",sub:"Personal Auto",q:"Under PAP, which of the following is covered as a 'temporary substitute vehicle'?",choices:["A vehicle rented for a vacation","A vehicle borrowed from a dealer while the covered auto is being serviced or repaired","A vehicle borrowed for more than 30 days","A vehicle the insured is test-driving before purchasing"],answer:1,exp:"A temporary substitute auto is one borrowed while the covered auto is out of normal use due to breakdown, repair, servicing, loss, or destruction. It qualifies as a covered auto under the PAP."},
+{id:180,cat:"Texas Laws & Regulations",sub:"Financial Responsibility",q:"Under Texas law, what happens to an insurer's obligation when an insured provides false or misleading information on an application?",choices:["The insurer must still pay all claims","The insurer may void the policy from inception if the misrepresentation was material","The insurer can only increase the premium","The insurer must pay 50% of any claim"],answer:1,exp:"If an insured makes a material misrepresentation on the application, the insurer may rescind (void) the policy from its inception, as if it never existed, and return any premium paid."},
+{id:181,cat:"Property Insurance",sub:"Commercial Property",q:"'Bailee's coverage' insures:",choices:["Damage to property while being transported by common carrier","Property belonging to others that is in the insured's care, custody, or control","Only the insured's property when left with another party","Theft from a safe deposit box"],answer:1,exp:"Bailee's coverage protects a business (bailee) that has temporary possession of customers' property—like a dry cleaner or repair shop—against damage to that customer property while in their care."},
+{id:182,cat:"Casualty/Liability Insurance",sub:"General Liability",q:"Under the CGL policy, 'bodily injury' is defined as:",choices:["Only physical injuries requiring hospitalization","Bodily injury, sickness, or disease, including resulting death","Mental anguish only","Only injuries occurring on business premises"],answer:1,exp:"CGL defines 'bodily injury' broadly as bodily injury, sickness, or disease sustained by a person, including death resulting from any of these at any time."},
+{id:183,cat:"Texas Laws & Regulations",sub:"TDI & Licensing",q:"Texas law prohibits an agent from paying a referral fee to:",choices:["Another licensed agent","An unlicensed person for referring insurance customers","A policyholder for recommending the agent to others","An employee of the agency"],answer:1,exp:"Texas Insurance Code prohibits paying referral fees or other compensation to unlicensed individuals for referring insurance business. Only licensed agents may receive commission or compensation for insurance transactions."},
+{id:184,cat:"Property Insurance",sub:"Homeowners",q:"Under the HO-3 'earth movement' exclusion, which of the following would NOT be excluded?",choices:["Earthquake shaking damage","Land subsidence causing the foundation to crack","Sinkhole collapse (excluded in most states, but check state law)","Fire caused by an earthquake (fire following earthquake IS covered)"],answer:3,exp:"Most HO policies exclude earth movement (earthquake, subsidence, landslide), BUT the resulting fire is covered under the fire peril. 'Fire following earthquake' is a key covered exception to the earth movement exclusion."},
+{id:185,cat:"Casualty/Liability Insurance",sub:"Workers Compensation",q:"Under Texas workers compensation, the maximum weekly income benefit for a temporary total disability is limited to:",choices:["The worker's full pre-injury average weekly wage","A percentage of the state average weekly wage, subject to a statutory maximum","Minimum wage only","Whatever the employer agrees to pay"],answer:1,exp:"Texas WC temporary income benefits (TIBs) are 70% of the worker's average weekly wage, but cannot exceed 100% of the state average weekly wage (a statutory cap set annually by DWC)."},
+{id:186,cat:"Texas Laws & Regulations",sub:"Cancellation & Nonrenewal",q:"After a homeowners insurer nonrenews a policy, the insured is entitled to:",choices:["Immediate free replacement coverage from the FAIR Plan","Coverage through the end of the current policy period, plus the ability to seek other coverage","Continued coverage for 6 months at no cost","An automatic renewal at higher premium"],answer:1,exp:"When a homeowners policy is nonrenewed, coverage continues through the expiration date of the current policy period. The insured has that time to obtain replacement coverage elsewhere."},
+{id:187,cat:"General Insurance Concepts",sub:"Risk",q:"'Moral hazard' in insurance refers to:",choices:["Physical conditions increasing the chance of loss","The tendency of dishonest people to increase their risk of loss or commit fraud because they have insurance","The danger of mixing business and personal insurance","Physical wear and tear of insured property"],answer:1,exp:"Moral hazard is the increased risk arising from a person's dishonest character or intent—for example, someone who would commit arson for insurance proceeds. Distinct from 'morale hazard' (careless indifference due to insurance)."},
+{id:188,cat:"Property Insurance",sub:"Commercial Property",q:"'Functional replacement cost' valuation means:",choices:["Paying the original purchase price","Replacing damaged property with functionally equivalent (though not identical) property at possibly lower cost","Paying full replacement cost without depreciation","Paying the insured's estimated value"],answer:1,exp:"Functional replacement cost pays the cost of replacing damaged property with a functionally equivalent item using modern materials and construction, which may be less expensive than replicating the original."},
+{id:189,cat:"Casualty/Liability Insurance",sub:"Professional Liability",q:"'Vicarious liability' in insurance means:",choices:["Liability for one's own direct acts","Liability imposed on one party for the wrongful acts of another (e.g., employer for employee negligence)","Liability for acts of competitors","Criminal liability only"],answer:1,exp:"Vicarious liability (respondeat superior) holds an employer responsible for an employee's negligent acts performed within the scope of employment, creating employer exposure even when the employer is not directly at fault."},
+{id:190,cat:"Texas Laws & Regulations",sub:"TDI & Licensing",q:"Under Texas law, an insurance agent who receives a written complaint from a client must:",choices:["Ignore it if they believe it is unfounded","Respond in writing within 10 days of receipt","Forward it to TDI only","Only respond if the complaint involves more than $500"],answer:1,exp:"Texas Insurance Code requires agents to respond in writing to written complaints from clients within 10 business days. TDI also investigates consumer complaints filed with the department."},
+{id:191,cat:"Property Insurance",sub:"TWIA",q:"TWIA coverage excludes which of the following?",choices:["Windstorm damage to the roof","Hail damage to windows","Flood damage","Structural damage from tornado winds"],answer:2,exp:"TWIA provides wind and hail coverage only. Flood damage is specifically excluded from TWIA policies and must be covered by a separate NFIP or private flood insurance policy."},
+{id:192,cat:"Casualty/Liability Insurance",sub:"Personal Auto",q:"When a covered auto under the PAP is involved in an accident, the insured's duties include:",choices:["Paying the other party directly to avoid a claim","Promptly notifying the insurer, cooperating with the investigation, and submitting to examination under oath if required","Only notifying the police and not the insurer","Handling all negotiations with the other party independently"],answer:1,exp:"After an accident, the insured must promptly notify the insurer, cooperate with the investigation, provide all relevant information, submit to examination under oath, and attend hearings as required."},
+{id:193,cat:"Texas Laws & Regulations",sub:"Surplus Lines",q:"The Surplus Lines Stamping Office of Texas (SLSOT) is responsible for:",choices:["Setting surplus lines tax rates","Reviewing surplus lines filings for compliance and collecting the surplus lines tax","Licensing surplus lines insurers","Approving all surplus lines claims"],answer:1,exp:"SLSOT reviews surplus lines policy filings for compliance with Texas surplus lines laws and regulations and oversees the collection of the surplus lines premium tax."},
+{id:194,cat:"General Insurance Concepts",sub:"Policy Structure",q:"An 'omnibus clause' in a liability policy typically:",choices:["Covers all perils without exception","Extends coverage to additional insureds not specifically named—such as permissive users of an auto","Eliminates the deductible","Provides coverage in all countries"],answer:1,exp:"The omnibus clause (common in auto policies) extends liability coverage to individuals using the covered vehicle with the named insured's permission, even if not specifically listed in the policy."},
+{id:195,cat:"Property Insurance",sub:"Homeowners",q:"Personal liability coverage under an HO policy (Coverage E) covers the insured for:",choices:["Property damage to the insured's own home","Legal liability for accidental bodily injury or property damage to third parties arising from personal activities","Only injuries occurring at the insured's premises","Business-related liability"],answer:1,exp:"Coverage E pays on behalf of the insured all sums for which they are legally liable due to accidental bodily injury or property damage to others arising from personal (non-business) activities, anywhere in the world."},
+{id:196,cat:"Casualty/Liability Insurance",sub:"General Liability",q:"The 'pollution exclusion' in a standard CGL policy excludes coverage for:",choices:["All environmental damage","Bodily injury or property damage arising from the discharge, dispersal, or release of pollutants","Employee injuries from chemical exposure","Only government-designated Superfund sites"],answer:1,exp:"The absolute pollution exclusion eliminates coverage for BI/PD arising from the release, discharge, or escape of pollutants (irritants or contaminants) into the environment."},
+{id:197,cat:"Texas Laws & Regulations",sub:"Claims Handling",q:"Under the Texas Insurance Code, an insurer's duty to defend is:",choices:["Limited to claims that are clearly covered","Broader than the duty to indemnify—the duty to defend arises if the allegations in the complaint potentially fall within policy coverage","The same as the duty to pay claims","Only triggered after a court judgment"],answer:1,exp:"Texas follows the 'eight corners rule'—the duty to defend is determined by comparing the complaint's allegations against the policy terms. If any allegation potentially falls within coverage, the insurer must defend."},
+{id:198,cat:"Property Insurance",sub:"Commercial Property",q:"'Consequential loss' in property insurance refers to:",choices:["The direct physical damage to property","Indirect losses resulting from the direct physical damage, such as lost profits or extra expenses","Only losses exceeding $100,000","Losses caused by a third party's actions"],answer:1,exp:"Consequential (indirect) losses flow from the direct physical damage—lost business income, extra expenses, or spoilage of goods—as opposed to the direct repair or replacement cost."},
+{id:199,cat:"Casualty/Liability Insurance",sub:"Personal Auto",q:"Under Texas law, proof of financial responsibility must be shown:",choices:["Only when purchasing a new vehicle","When stopped by law enforcement, at vehicle registration, and when involved in an accident","Only when renewing a driver's license","Only after a second traffic violation"],answer:1,exp:"Texas requires drivers to show proof of insurance when requested by law enforcement, when registering a vehicle, and when involved in an accident. Texas TexasSure verifies insurance electronically."},
+{id:200,cat:"Texas Laws & Regulations",sub:"TDI & Licensing",q:"The Texas Department of Insurance's primary mission is:",choices:["To maximize insurance company profits","To protect insurance consumers and ensure a stable, competitive insurance market in Texas","To collect taxes from insurance companies","To provide insurance directly to Texas citizens"],answer:1,exp:"TDI's primary mission is consumer protection—ensuring Texans have access to a reliable insurance market, that companies are financially sound, and that the Texas Insurance Code is enforced."},
+{id:201,cat:"General Insurance Concepts",sub:"Policy Structure",q:"What does 'subrogation waiver' mean in an insurance context?",choices:["The insurer waives the right to pursue the negligent third party after paying the insured's claim","The insured waives their right to file a claim","The insurer waives the deductible","Both parties waive their rights to file claims against each other"],answer:0,exp:"A subrogation waiver in a policy (or requested by an insured for a specific contract) means the insurer gives up its right to recover from a responsible third party after paying the claim."},
+{id:202,cat:"Property Insurance",sub:"Dwelling Policies",q:"The DP-2 (Broad Form) dwelling policy covers:",choices:["Open perils for both dwelling and contents","Named perils including the DP-1 perils plus additional ones like vandalism, falling objects, weight of ice and snow","Only fire and lightning","The same perils as the HO-3"],answer:1,exp:"The DP-2 covers more named perils than the DP-1, adding vandalism, malicious mischief, falling objects, weight of ice/sleet/snow, and several water-related perils to the basic fire/lightning perils."},
+{id:203,cat:"Casualty/Liability Insurance",sub:"Workers Compensation",q:"Under Texas workers compensation, 'income benefits' for injured employees include:",choices:["Only temporary total disability","Temporary Income Benefits (TIBs), Impairment Income Benefits (IIBs), Supplemental Income Benefits (SIBs), and Lifetime Income Benefits (LIBs)","Full salary for life","Only permanent disability benefits"],answer:1,exp:"Texas WC income benefits have four tiers: TIBs (during healing), IIBs (after maximum medical improvement based on impairment rating), SIBs (ongoing partial disability), and LIBs (catastrophic injuries—payable for life)."},
+{id:204,cat:"Texas Laws & Regulations",sub:"Unfair Trade Practices",q:"Which of the following statements about 'inducements' under Texas law is CORRECT?",choices:["Agents may give clients gifts of any value","Gifts or inducements valued at more than $25 per year to any one insured are generally prohibited","Only cash inducements are prohibited","Inducements are permitted if disclosed on the application"],answer:1,exp:"Texas law generally limits gifts, premiums, or inducements offered to induce the purchase of insurance to $25 or less per year per client. Items of nominal value used for advertising (pens, calendars) are generally exempt."},
+
+{id:205,cat:"Property Insurance",sub:"Commercial Property",q:"'Boiler and machinery' (Equipment Breakdown) coverage protects against:",choices:["Fire damage to boilers","Mechanical or electrical breakdown of covered equipment causing property damage","Routine maintenance costs for boilers","Only steam boiler explosions"],answer:1,exp:"Equipment Breakdown (formerly Boiler & Machinery) covers direct damage to equipment from mechanical or electrical breakdown, including the cost to repair or replace the equipment and resulting business income loss."},
+{id:206,cat:"Casualty/Liability Insurance",sub:"General Liability",q:"Which of the following is covered under the CGL 'fire legal liability' coverage?",choices:["Fire damage to the insured's own building","The insured's legal liability for fire damage to premises they rent or temporarily occupy","Fire damage to adjacent properties","Arson claims against the insured"],answer:1,exp:"Fire legal liability (a CGL coverage) protects tenants who are legally liable for fire damage to premises they rent. For example, a business that accidentally causes a fire in a rented office building."},
+{id:207,cat:"Texas Laws & Regulations",sub:"TDI & Licensing",q:"Under the Texas Insurance Code, an insurer that fails to maintain adequate reserves may be subject to:",choices:["Only a written warning","Supervision, conservation, or liquidation by the Commissioner of Insurance","Fines of up to $100","Suspension of a single agent's license"],answer:1,exp:"If a Texas insurer fails to maintain adequate reserves or becomes financially impaired, the Commissioner may place the company under supervision, conservation (with a conservator appointed), or liquidation."},
+{id:208,cat:"Property Insurance",sub:"Homeowners",q:"The 'mortgage clause' in a homeowners policy protects the mortgagee (lender) by:",choices:["Making the lender the named insured","Ensuring that even if the insured violates policy conditions, the lender's interest may still be protected and claims are paid to the lender","Requiring the lender to pay the premium","Giving the lender the right to cancel the policy"],answer:1,exp:"The standard mortgage clause (not a simple 'loss payable' clause) provides that the mortgagee's coverage is separate from the insured's—so the lender's claim is paid even if the insured commits fraud or violates policy conditions."},
+{id:209,cat:"Casualty/Liability Insurance",sub:"Workers Compensation",q:"The 'exclusive remedy' doctrine in workers compensation means:",choices:["Workers comp is the exclusive responsibility of each state","Workers comp benefits are the worker's exclusive remedy against the employer for work injuries—they cannot sue the employer in tort","The employer can choose which remedy to provide","Only one doctor can treat each injury"],answer:1,exp:"Exclusive remedy means that workers compensation replaces tort liability: employees give up the right to sue their employer in exchange for guaranteed benefits regardless of fault. (Texas, which makes WC elective, is an exception for non-subscribers.)"},
+{id:210,cat:"Texas Laws & Regulations",sub:"Surplus Lines",q:"Which of the following statements about surplus lines in Texas is TRUE?",choices:["Surplus lines policies are backed by the Texas Guaranty Association","Surplus lines policies are NOT backed by the Texas P&C Guaranty Association","Surplus lines insurers are licensed in Texas the same as admitted carriers","Surplus lines premiums have no tax applied to them"],answer:1,exp:"This is critical: surplus lines (non-admitted) policies are NOT covered by the Texas P&C Insurance Guaranty Association. If a surplus lines insurer becomes insolvent, policyholders may not be protected."},
+{id:211,cat:"General Insurance Concepts",sub:"Fundamental Principles",q:"The 'reasonable person' standard in insurance often determines:",choices:["What premium to charge","Whether an insured's conduct or belief was prudent in the circumstances","The minimum coverage required by law","How long an insurer has to pay a claim"],answer:1,exp:"The reasonable person standard asks whether the insured's actions or beliefs were those of a reasonable person in similar circumstances—used in determining negligence, cooperation requirements, and constructive fraud."},
+{id:212,cat:"Property Insurance",sub:"Commercial Property",q:"A 'vacancy' in a commercial or residential property typically triggers which of the following under most property policies?",choices:["Automatic cancellation of the policy","Suspension or limitation of coverage after a specified period of vacancy (often 60 days)","Higher coverage limits","No change in coverage"],answer:1,exp:"Most property policies limit or suspend certain coverages (vandalism, glass breakage, water damage from burst pipes, etc.) if the building has been vacant for more than 60 consecutive days."},
+{id:213,cat:"Casualty/Liability Insurance",sub:"Personal Auto",q:"The PAP 'excluded drivers' endorsement:",choices:["Excludes certain perils from coverage","Names a specific individual and excludes any coverage while that person is driving the covered auto","Excludes coverage for drivers under age 25","Excludes commercial use of the vehicle"],answer:1,exp:"An excluded driver endorsement names a specific person (such as a household member with a poor driving record) and excludes all coverage while that person operates the covered vehicle."},
+{id:214,cat:"Texas Laws & Regulations",sub:"Claims Handling",q:"Texas law requires that if a claim investigation cannot be completed within 15 business days, the insurer must:",choices:["Automatically pay the claim","Notify the insured in writing explaining why more time is needed and when a decision is expected","Cancel the policy","Assign the claim to a third-party administrator"],answer:1,exp:"If an insurer cannot accept or reject a claim within 15 business days after receiving all required items, it must send written notice explaining the reason for the delay and when a decision is expected."},
+{id:215,cat:"Property Insurance",sub:"Inland Marine",q:"The 'accounts receivable' coverage form under inland marine covers:",choices:["Cash in transit","The insured's inability to collect outstanding receivables because accounting records were damaged or destroyed by a covered peril","Product liability for sold goods","Losses from unpaid invoices due to customer insolvency"],answer:1,exp:"Accounts receivable coverage pays the amount the insured is unable to collect from customers because their accounts receivable records were destroyed by a covered cause, including collection expenses."},
+{id:216,cat:"Casualty/Liability Insurance",sub:"General Liability",q:"'Host liquor liability' under the CGL policy covers:",choices:["Liquor stores and bars","Businesses or individuals that serve alcohol at company events without being in the business of selling alcohol","Only professional bartenders","All liquor-related liability claims"],answer:1,exp:"Host liquor liability covers non-liquor-trade businesses (like a company holiday party) for liability arising from serving alcohol. Businesses actually in the liquor business need separate liquor liability coverage."},
+{id:217,cat:"Texas Laws & Regulations",sub:"TDI & Licensing",q:"An insurance company that has received a 'cease and desist' order from TDI must:",choices:["File an appeal immediately","Stop the prohibited conduct immediately or face fines, license revocation, or other penalties","Continue operations for 30 days before complying","Notify all policyholders of the order"],answer:1,exp:"A TDI cease and desist order requires the insurer to immediately stop the conduct specified in the order. Failure to comply can result in additional penalties, fines, or license revocation."},
+{id:218,cat:"Property Insurance",sub:"Commercial Property",q:"Under a commercial property policy, 'personal property of others' coverage:",choices:["Is never covered under commercial policies","May cover property of others in the insured's care for which the insured is legally liable","Automatically covers all customer property on premises","Requires a separate bailee's policy"],answer:1,exp:"Commercial property policies often include limited coverage for personal property of others in the insured's care, custody, or control for which the insured is legally liable. Broader coverage requires a bailee endorsement."},
+{id:219,cat:"Casualty/Liability Insurance",sub:"Professional Liability",q:"Which of the following professionals would most need Errors and Omissions (E&O) insurance?",choices:["A factory assembly worker","An insurance agent who provides advice and sells insurance policies","A delivery driver","A warehouse inventory worker"],answer:1,exp:"Insurance agents face significant E&O exposure: they can be sued for failing to place coverage requested, recommending inadequate limits, or making errors in policy applications. E&O protects them from these professional liability claims."},
+{id:220,cat:"Texas Laws & Regulations",sub:"Financial Responsibility",q:"Texas's TexasSure program is designed to:",choices:["Provide free insurance to low-income Texans","Electronically verify that registered vehicles have the required minimum liability insurance","Create a state-run insurance company","Monitor insurance agents for compliance"],answer:1,exp:"TexasSure is Texas's electronic insurance verification program that allows law enforcement and DMV officials to verify in real-time whether a vehicle has the required minimum liability insurance coverage."},
+{id:221,cat:"General Insurance Concepts",sub:"Risk",q:"Which of the following best describes 'adverse selection' in insurance?",choices:["Insurers selecting favorable risks only","High-risk individuals are more likely to seek insurance than low-risk individuals, skewing the insured pool","Insurance companies selecting bad claims adjusters","Insureds making poor coverage choices"],answer:1,exp:"Adverse selection occurs when those with higher-than-average risk are more likely to purchase insurance, potentially causing the insured pool to have worse-than-expected loss experience."},
+{id:222,cat:"Property Insurance",sub:"Homeowners",q:"The HO-2 Broad Form homeowners policy covers:",choices:["Open perils for the dwelling","Named perils (an expanded list beyond HO-1) for both the dwelling and personal property","Open perils for both dwelling and personal property","Only fire and lightning"],answer:1,exp:"HO-2 (Broad Form) provides named perils coverage for both the dwelling and personal property, with a broader list of covered perils than HO-1 but less comprehensive than the open perils of HO-3/HO-5."},
+{id:223,cat:"Casualty/Liability Insurance",sub:"General Liability",q:"'Medical payments to others' coverage (Coverage F) in a homeowners policy:",choices:["Requires proof of legal liability","Pays reasonable medical expenses for guests injured on the insured's premises regardless of fault","Covers the insured's own medical expenses","Is the same as Coverage E liability"],answer:1,exp:"Coverage F (Medical Payments) pays necessary medical expenses for guests accidentally injured on the insured property, without requiring the insured to be legally liable. It is a goodwill coverage."},
+{id:224,cat:"Texas Laws & Regulations",sub:"TDI & Licensing",q:"An insurance agent who engages in 'churning' could face:",choices:["A bonus from their insurance company","License suspension or revocation, fines, and potential criminal charges","Only a written warning","A temporary suspension for 30 days only"],answer:1,exp:"Churning (or twisting) is an unfair trade practice under the Texas Insurance Code. Agents engaged in this conduct face license suspension or revocation, civil penalties, and potential criminal prosecution."},
+{id:225,cat:"Property Insurance",sub:"TWIA",q:"TWIA policies are sold through:",choices:["Only the TWIA office directly","Licensed agents who are appointed by TWIA to sell wind policies on its behalf","Only the Texas FAIR Plan","Any admitted insurer in Texas"],answer:1,exp:"TWIA sells coverage through a network of appointed insurance agents who are authorized to issue TWIA wind and hail policies on TWIA's behalf for eligible coastal properties."},
+{id:226,cat:"Casualty/Liability Insurance",sub:"General Liability",q:"The 'per occurrence' trigger in a CGL policy means that each separate occurrence has:",choices:["No coverage limit","Its own occurrence limit, but all claims from the policy period share the aggregate limit","A deductible of $1,000 per occurrence","Unlimited coverage"],answer:1,exp:"The per occurrence limit caps the insurer's payment for all damages from a single accident or occurrence. Multiple occurrences in a policy year each have the per occurrence limit, but together are capped by the aggregate limit."},
+{id:227,cat:"Texas Laws & Regulations",sub:"Unfair Trade Practices",q:"Under Texas law, 'unfair discrimination' in setting insurance rates is prohibited. An example of unfair discrimination would be:",choices:["Charging higher premiums in high-crime areas","Charging different rates for the same risk based on race, color, religion, or national origin","Adjusting premiums based on driving record","Setting premiums based on credit history (as permitted under Texas law)"],answer:1,exp:"Charging different rates for the same risk based on protected characteristics (race, color, religion, national origin, sex in certain contexts) is unfair discrimination and is prohibited under the Texas Insurance Code."},
+{id:228,cat:"General Insurance Concepts",sub:"Contract Characteristics",q:"Which characteristic of insurance contracts means the insured must perform first (pay premium) before the insurer's duty to perform arises?",choices:["Aleatory","Adhesion","Conditional","Unilateral"],answer:2,exp:"Insurance is a conditional contract. The insurer's duty to pay is conditioned on the insured fulfilling conditions—first paying the premium, then meeting post-loss conditions like notice and cooperation."},
+{id:229,cat:"Casualty/Liability Insurance",sub:"Personal Auto",q:"Under the PAP, coverage for non-owned autos used by the named insured is:",choices:["The same as for owned autos","Available but may be limited—liability coverage extends but physical damage usually does not apply to non-owned autos","Not available under any circumstances","Only available with a commercial auto endorsement"],answer:1,exp:"PAP liability coverage extends to non-owned autos (cars borrowed, not owned or furnished for regular use). However, physical damage coverage (comprehensive/collision) does not follow the insured to a non-owned vehicle."},
+{id:230,cat:"Texas Laws & Regulations",sub:"TDI & Licensing",q:"The Texas Insurance Code requires an insurer to provide a written explanation of a claim denial within how many days of the denial decision?",choices:["5 business days","15 business days","30 days","60 days"],answer:1,exp:"Texas Insurance Code requires insurers to provide a written statement of the reasons for denial within 15 business days after notifying the claimant or insured of the denial."},
+];
+
+// ============================================================
+// TX P&C Exam Prep App — Main JavaScript
+// ============================================================
+
+const CATS = [
+  "General Insurance Concepts",
+  "Property Insurance",
+  "Casualty/Liability Insurance",
+  "Texas Laws & Regulations"
+];
+const CAT_COLORS = ["bgb","bgg","bgy","bgp"];
+const LETTERS = ['A','B','C','D'];
+const PASS_PCT = 70;
+const MAX_HISTORY = 20;
+
+// ---- State ----
+let state = {
+  // quiz session
+  mode: null,       // 'quick'|'practice'|'full'|'missed'
+  questions: [],    // shuffled question objects for current session
+  answers: [],      // array of chosen answer indices (-1 = unanswered)
+  shuffled: [],     // per-question shuffled choice indices
+  flagged: new Set(),
+  currentIdx: 0,
+  submitted: false,
+  noBack: false,
+  timerSecs: 0,
+  timerInterval: null,
+  resultData: null,
+};
+
+// ---- LocalStorage helpers ----
+function lsGet(k){ try{return JSON.parse(localStorage.getItem(k))}catch(e){return null} }
+function lsSet(k,v){ localStorage.setItem(k, JSON.stringify(v)) }
+
+function getProfile(){ return lsGet('txpc_profile') || {name:''} }
+function getHistory(){ return lsGet('txpc_history') || [] }
+function getCatStats(){ return lsGet('txpc_cats') || {} }
+function getMissed(){ return lsGet('txpc_missed') || [] }
+function getBookmarks(){ return lsGet('txpc_bookmarks') || [] }
+function getTheme(){ return lsGet('txpc_theme') || 'dark' }
+
+function saveProfile(p){ lsSet('txpc_profile',p) }
+function saveHistory(h){ lsSet('txpc_history',h) }
+function saveCatStats(s){ lsSet('txpc_cats',s) }
+function saveMissed(m){ lsSet('txpc_missed',m) }
+function saveBookmarks(b){ lsSet('txpc_bookmarks',b) }
+function saveTheme(t){ lsSet('txpc_theme',t) }
+
+// ---- Init ----
+document.addEventListener('DOMContentLoaded', () => {
+  applyTheme();
+  document.getElementById('totalQBadge').textContent = QUESTIONS.length + ' Questions';
+  document.getElementById('qCountInfo').textContent = QUESTIONS.length;
+  loadProfile();
+  renderHome();
+  renderStudy();
+});
+
+// ---- Theme ----
+function applyTheme(){
+  const t = getTheme();
+  if(t === 'light') document.body.classList.add('lm');
+  else document.body.classList.remove('lm');
+  document.getElementById('themeBtn').textContent = t === 'light' ? '🌙' : '☀️';
+}
+function toggleTheme(){
+  const t = getTheme() === 'light' ? 'dark' : 'light';
+  saveTheme(t);
+  applyTheme();
+}
+
+// ---- Navigation ----
+function nav(screenId, navEl){
+  document.querySelectorAll('.sc').forEach(s=>s.classList.remove('active'));
+  document.getElementById(screenId).classList.add('active');
+  document.querySelectorAll('.ni').forEach(n=>n.classList.remove('act'));
+  if(navEl) navEl.classList.add('act');
+  if(screenId==='homeScreen') renderHome();
+  if(screenId==='historyScreen') renderHistory();
+  if(screenId==='studyScreen') renderStudy();
+  if(screenId==='profileScreen') renderProfile();
+}
+
+// ---- Profile ----
+function loadProfile(){
+  const p = getProfile();
+  document.getElementById('headerUser').textContent = p.name ? ('👋 ' + p.name) : '';
+}
+function renderProfile(){
+  document.getElementById('nameInput').value = getProfile().name || '';
+}
+function saveName(){
+  const p = getProfile();
+  p.name = document.getElementById('nameInput').value.trim();
+  saveProfile(p);
+  document.getElementById('headerUser').textContent = p.name ? ('👋 ' + p.name) : '';
+}
+function exportProfile(){
+  const data = {
+    profile: getProfile(),
+    history: getHistory(),
+    cats: getCatStats(),
+    missed: getMissed(),
+    bookmarks: getBookmarks(),
+    theme: getTheme(),
+    exportedAt: new Date().toISOString()
+  };
+  const blob = new Blob([JSON.stringify(data,null,2)],{type:'application/json'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'txpc_profile_' + new Date().toISOString().slice(0,10) + '.json';
+  a.click();
+}
+function importProfile(ev){
+  const file = ev.target.files[0];
+  if(!file) return;
+  const r = new FileReader();
+  r.onload = e => {
+    try {
+      const d = JSON.parse(e.target.result);
+      if(d.profile) saveProfile(d.profile);
+      if(d.history) saveHistory(d.history);
+      if(d.cats) saveCatStats(d.cats);
+      if(d.missed) saveMissed(d.missed);
+      if(d.bookmarks) saveBookmarks(d.bookmarks);
+      if(d.theme) { saveTheme(d.theme); applyTheme(); }
+      loadProfile();
+      renderHome();
+      renderProfile();
+      alert('Profile imported successfully!');
+    } catch(ex) { alert('Error importing profile: ' + ex.message); }
+  };
+  r.readAsText(file);
+  ev.target.value = '';
+}
+function confirmReset(){
+  showConfirm('Reset All Progress','This will permanently delete all quiz history, category performance, missed questions, and bookmarks. Your name will be kept. This cannot be undone.', ()=>{
+    lsSet('txpc_history',[]);
+    lsSet('txpc_cats',{});
+    lsSet('txpc_missed',[]);
+    lsSet('txpc_bookmarks',[]);
+    renderHome();
+    alert('Progress reset.');
+  });
+}
+
+// ---- Confirm modal ----
+let _confirmCb = null;
+function showConfirm(title, msg, cb){
+  document.getElementById('confirmTitle').textContent = title;
+  document.getElementById('confirmMsg').textContent = msg;
+  _confirmCb = cb;
+  document.getElementById('confirmModal').classList.remove('hn');
+}
+function closeConfirm(){ document.getElementById('confirmModal').classList.add('hn'); _confirmCb=null; }
+document.getElementById('confirmOkBtn').onclick = ()=>{ closeConfirm(); if(_confirmCb) _confirmCb(); };
+
+// ---- Quiz Config ----
+let _cfgMode = null;
+function openCfg(mode){
+  _cfgMode = mode;
+  const titles = {quick:'⚡ Quick Quiz',practice:'📝 Practice Quiz',full:'🎯 Full Practice Test',missed:'🔄 Missed Questions'};
+  const descs = {
+    quick:'4 randomly selected questions for a fast warm-up.',
+    practice:'30 questions covering all categories.',
+    full:'120 questions with a 2.5 hour countdown timer — simulates the real exam.',
+    missed:'Practice questions you previously answered incorrectly.'
+  };
+  document.getElementById('cfgTitle').textContent = titles[mode];
+  document.getElementById('cfgDesc').textContent = descs[mode];
+  document.getElementById('noBackRow').style.display = (mode==='full') ? '' : 'none';
+  document.getElementById('cfgModal').classList.remove('hn');
+}
+function closeCfg(){ document.getElementById('cfgModal').classList.add('hn'); }
+function startFromCfg(){
+  const tailored = document.getElementById('tailoredTgl').classList.contains('on');
+  const noBack = document.getElementById('noBackTgl').classList.contains('on');
+  closeCfg();
+  startQuiz(_cfgMode, tailored, noBack);
+}
+
+// ---- Question selection ----
+function shuffle(arr){ return arr.slice().sort(()=>Math.random()-.5); }
+
+function pickQuestions(mode, tailored){
+  let pool = QUESTIONS.slice();
+  if(mode==='missed'){
+    const missedIds = new Set(getMissed());
+    pool = pool.filter(q=>missedIds.has(q.id));
+    if(!pool.length){ alert('No missed questions yet! Take a quiz first.'); return null; }
+    return shuffle(pool).slice(0,Math.min(30,pool.length));
+  }
+  const counts = {quick:4, practice:30, full:120};
+  const n = counts[mode];
+  if(tailored){
+    return pickTailored(pool, n);
+  }
+  // Random distributed across categories
+  return pickDistributed(pool, n);
+}
+
+function pickDistributed(pool, n){
+  // Distribute proportionally across 4 categories
+  const weights = [0.20, 0.30, 0.25, 0.25];
+  let result = [];
+  CATS.forEach((cat,i)=>{
+    const catPool = shuffle(pool.filter(q=>q.cat===cat));
+    const want = Math.round(n * weights[i]);
+    result = result.concat(catPool.slice(0,want));
+  });
+  // Fill remainder randomly if needed
+  const got = result.map(q=>q.id);
+  const remaining = shuffle(pool.filter(q=>!got.includes(q.id)));
+  while(result.length < n && remaining.length) result.push(remaining.shift());
+  return shuffle(result).slice(0,n);
+}
+
+function pickTailored(pool, n){
+  const cats = getCatStats();
+  // For each category, get score (default 50% if no data)
+  const catScores = {};
+  CATS.forEach(cat=>{
+    const s = cats[cat];
+    catScores[cat] = s ? (s.correct/s.total) : 0.5;
+  });
+  // Inverse weighting: weaker cats get more questions
+  const inv = CATS.map(cat => 1 - catScores[cat]);
+  const total = inv.reduce((a,b)=>a+b,0);
+  let result = [];
+  CATS.forEach((cat,i)=>{
+    const catPool = shuffle(pool.filter(q=>q.cat===cat));
+    const want = Math.max(1, Math.round(n * (inv[i]/total)));
+    result = result.concat(catPool.slice(0,want));
+  });
+  const got = result.map(q=>q.id);
+  const remaining = shuffle(pool.filter(q=>!got.includes(q.id)));
+  while(result.length < n && remaining.length) result.push(remaining.shift());
+  return shuffle(result).slice(0,n);
+}
+
+// ---- Start Quiz ----
+function startQuiz(mode, tailored, noBack){
+  const qs = pickQuestions(mode, tailored);
+  if(!qs) return;
+
+  state.mode = mode;
+  state.questions = qs;
+  state.answers = new Array(qs.length).fill(-1);
+  state.shuffled = qs.map(q=>{
+    // Shuffle choice indices
+    const indices = [0,1,2,3];
+    return indices.sort(()=>Math.random()-.5);
+  });
+  state.flagged = new Set();
+  state.currentIdx = 0;
+  state.submitted = false;
+  state.noBack = noBack;
+  state.resultData = null;
+
+  // Timer for full test
+  if(mode==='full'){
+    state.timerSecs = 2.5 * 60 * 60; // 9000 seconds
+    startTimer();
+  } else {
+    state.timerSecs = 0;
+    if(state.timerInterval){ clearInterval(state.timerInterval); state.timerInterval=null; }
+    document.getElementById('qTimer').classList.add('hn');
+  }
+
+  const labels = {quick:'⚡ Quick Quiz',practice:'📝 Practice Quiz',full:'🎯 Full Practice Test',missed:'🔄 Missed Questions'};
+  document.getElementById('qModeLabel').textContent = labels[mode] + (tailored?' · Tailored':'');
+  document.getElementById('prevBtn').style.display = noBack ? 'none' : '';
+
+  nav('quizScreen', null);
+  document.querySelectorAll('.ni').forEach(n=>n.classList.remove('act'));
+  renderQuestion();
+}
+
+// ---- Timer ----
+function startTimer(){
+  if(state.timerInterval) clearInterval(state.timerInterval);
+  document.getElementById('qTimer').classList.remove('hn');
+  updateTimerDisplay();
+  state.timerInterval = setInterval(()=>{
+    state.timerSecs--;
+    if(state.timerSecs <= 0){
+      clearInterval(state.timerInterval);
+      state.timerInterval = null;
+      submitQuiz();
+    }
+    updateTimerDisplay();
+  }, 1000);
+}
+function stopTimer(){ if(state.timerInterval){ clearInterval(state.timerInterval); state.timerInterval=null; } }
+function updateTimerDisplay(){
+  const el = document.getElementById('qTimer');
+  const s = state.timerSecs;
+  const h = Math.floor(s/3600), m = Math.floor((s%3600)/60), sec = s%60;
+  el.textContent = `${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(sec).padStart(2,'0')}`;
+  el.className = 'qtm';
+  if(s <= 300) el.classList.add('dng');
+  else if(s <= 900) el.classList.add('warn');
+}
+
+// ---- Render Question ----
+function renderQuestion(){
+  const q = state.questions[state.currentIdx];
+  const idx = state.currentIdx;
+  const total = state.questions.length;
+  const answered = state.answers.filter(a=>a!==-1).length;
+
+  document.getElementById('qProgress').textContent = `Question ${idx+1} of ${total} · ${answered} answered`;
+  document.getElementById('qProgressBar').style.width = ((idx+1)/total*100) + '%';
+
+  const catIdx = CATS.indexOf(q.cat);
+  document.getElementById('qCat').textContent = q.cat;
+  document.getElementById('qCat').className = 'badge ' + (CAT_COLORS[catIdx]||'bgb');
+  document.getElementById('qSub').textContent = q.sub;
+
+  document.getElementById('qText').textContent = q.q;
+
+  // Flag button
+  const fb = document.getElementById('flagBtn');
+  fb.className = 'flgbtn' + (state.flagged.has(idx) ? ' fl' : '');
+  fb.textContent = state.flagged.has(idx) ? '🚩 Flagged' : '🚩 Flag';
+
+  // Choices
+  const shuffleMap = state.shuffled[idx];
+  const chosen = state.answers[idx];
+  const answered2 = state.submitted || chosen !== -1;
+
+  const choicesDiv = document.getElementById('qChoices');
+  choicesDiv.innerHTML = '';
+
+  shuffleMap.forEach((origIdx, displayPos)=>{
+    const btn = document.createElement('button');
+    btn.className = 'abtn';
+    const letter = LETTERS[displayPos];
+    const choiceText = q.choices[origIdx];
+
+    // Style based on state
+    if(state.submitted || chosen !== -1){
+      if(origIdx === q.answer){
+        btn.classList.add('cor');
+      } else if(origIdx === chosen && origIdx !== q.answer){
+        btn.classList.add('wrg');
+      } else if(displayPos === shuffleMap.indexOf(chosen) && origIdx === chosen && origIdx !== q.answer){
+        btn.classList.add('wrg');
+      }
+    } else {
+      if(chosen === origIdx) btn.classList.add('sel');
+    }
+
+    if(chosen !== -1 || state.submitted) btn.disabled = true;
+
+    btn.innerHTML = `<span class="lt">${letter}</span><span>${choiceText}</span>`;
+    if(chosen === -1 && !state.submitted){
+      btn.addEventListener('click', ()=>selectAnswer(origIdx));
+    }
+    choicesDiv.appendChild(btn);
+  });
+
+  // Explanation
+  const expDiv = document.getElementById('qExp');
+  if(chosen !== -1 || state.submitted){
+    expDiv.textContent = q.exp;
+    expDiv.classList.add('show');
+  } else {
+    expDiv.classList.remove('show');
+    expDiv.textContent = '';
+  }
+
+  // Nav buttons
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const submitBtn = document.getElementById('submitBtn');
+
+  if(!state.noBack){
+    prevBtn.style.display = idx > 0 ? '' : 'none';
+    prevBtn.disabled = idx === 0;
+  }
+
+  const isLast = idx === total - 1;
+  if(isLast){
+    nextBtn.classList.add('hn');
+    submitBtn.classList.remove('hn');
+  } else {
+    nextBtn.classList.remove('hn');
+    submitBtn.classList.add('hn');
+  }
+
+  // Flagged panel
+  renderFlaggedPanel();
+}
+
+function selectAnswer(origIdx){
+  state.answers[state.currentIdx] = origIdx;
+  renderQuestion();
+}
+
+function toggleFlag(){
+  const idx = state.currentIdx;
+  if(state.flagged.has(idx)) state.flagged.delete(idx);
+  else state.flagged.add(idx);
+  renderQuestion();
+}
+
+function goPrev(){
+  if(state.currentIdx > 0){ state.currentIdx--; renderQuestion(); }
+}
+function goNext(){
+  if(state.currentIdx < state.questions.length-1){ state.currentIdx++; renderQuestion(); }
+}
+
+function renderFlaggedPanel(){
+  const panel = document.getElementById('flagPanel');
+  const list = document.getElementById('flagList');
+  if(state.flagged.size === 0){ panel.style.display='none'; return; }
+  panel.style.display = '';
+  list.innerHTML = '';
+  state.flagged.forEach(i=>{
+    const btn = document.createElement('button');
+    btn.className = 'btn bsm bs' + (i===state.currentIdx?' bp':'');
+    btn.style.background = i===state.currentIdx ? 'var(--ac)' : '';
+    btn.style.color = i===state.currentIdx ? '#fff' : '';
+    btn.textContent = i+1;
+    btn.onclick = ()=>{ state.currentIdx=i; renderQuestion(); };
+    list.appendChild(btn);
+  });
+}
+
+function endEarly(){
+  showConfirm('End Quiz Early','Submit the quiz now with your current answers? Unanswered questions will be marked wrong.', ()=>submitQuiz());
+}
+
+// ---- Submit Quiz ----
+function submitQuiz(){
+  stopTimer();
+  state.submitted = true;
+
+  const qs = state.questions;
+  const answers = state.answers;
+
+  // Calculate results
+  let correct = 0;
+  const catResults = {};
+  CATS.forEach(c=>{ catResults[c]={correct:0,total:0}; });
+
+  const wrongQs = [];
+  const flaggedQs = [];
+
+  qs.forEach((q,i)=>{
+    const chosen = answers[i];
+    const isCorrect = chosen === q.answer;
+    if(isCorrect) correct++;
+    catResults[q.cat].total++;
+    if(isCorrect) catResults[q.cat].correct++;
+    if(!isCorrect) wrongQs.push({q, chosen, shuffled: state.shuffled[i]});
+    if(state.flagged.has(i)) flaggedQs.push({q, chosen, shuffled: state.shuffled[i]});
+  });
+
+  const total = qs.length;
+  const pct = Math.round(correct/total*100);
+  const pass = state.mode==='full' && pct >= PASS_PCT;
+
+  state.resultData = {correct, total, pct, pass, catResults, wrongQs, flaggedQs};
+
+  // Save history
+  const hist = getHistory();
+  hist.unshift({
+    date: new Date().toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric',hour:'2-digit',minute:'2-digit'}),
+    mode: state.mode,
+    correct, total, pct,
+    pass: state.mode==='full' ? pass : null
+  });
+  saveHistory(hist.slice(0,MAX_HISTORY));
+
+  // Update category stats
+  const cats = getCatStats();
+  CATS.forEach(cat=>{
+    if(!cats[cat]) cats[cat]={correct:0,total:0};
+    cats[cat].correct += catResults[cat].correct;
+    cats[cat].total += catResults[cat].total;
+  });
+  saveCatStats(cats);
+
+  // Update missed questions deck
+  let missed = getMissed();
+  wrongQs.forEach(({q})=>{
+    if(!missed.includes(q.id)) missed.push(q.id);
+  });
+  // Remove correctly answered from missed
+  qs.forEach((q,i)=>{
+    if(answers[i]===q.answer){
+      missed = missed.filter(id=>id!==q.id);
+    }
+  });
+  saveMissed(missed);
+
+  renderResults();
+  nav('resultsScreen', null);
+  document.querySelectorAll('.ni').forEach(n=>n.classList.remove('act'));
+
+  if(state.mode==='full' && pass) launchConfetti();
+}
+
+// ---- Results ----
+function renderResults(){
+  const {correct, total, pct, pass, catResults, wrongQs, flaggedQs} = state.resultData;
+  const isFull = state.mode === 'full';
+
+  // Verdict
+  const verdictEl = document.getElementById('resVerdict');
+  if(isFull){
+    verdictEl.textContent = pass ? '🎉 PASS' : '❌ FAIL';
+    verdictEl.className = 'verdict ' + (pass?'pass':'fail');
+  } else {
+    verdictEl.textContent = pct>=70 ? '✅ Great Work!' : pct>=50 ? '📝 Keep Studying' : '⚠️ Needs Work';
+    verdictEl.className = 'verdict';
+  }
+
+  document.getElementById('resScore').textContent = `${pct}%`;
+  document.getElementById('resLabel').textContent = `${correct} of ${total} correct`;
+
+  // Badges
+  const badges = document.getElementById('resBadges');
+  badges.innerHTML = '';
+  const modeName = {quick:'Quick Quiz',practice:'Practice Quiz',full:'Full Practice Test',missed:'Missed Questions'};
+  badges.innerHTML = `<span class="badge bgb">${modeName[state.mode]}</span>
+    <span class="badge ${pct>=70?'bgg':pct>=50?'bgy':'bgr'}">${pct}%</span>
+    ${isFull?`<span class="badge ${pass?'bgg':'bgr'}">${pass?'PASS':'FAIL (need 70%)'}</span>`:''}`;
+
+  // Category breakdown
+  const catDiv = document.getElementById('resCats');
+  catDiv.innerHTML = '';
+  CATS.forEach((cat,i)=>{
+    const r = catResults[cat];
+    if(!r.total) return;
+    const p = Math.round(r.correct/r.total*100);
+    const cls = p>=80?'pfg':p>=60?'pfy':'pfr';
+    catDiv.innerHTML += `<div class="crow">
+      <div class="crh"><span style="font-weight:600;font-size:.83rem">${cat}</span><span style="font-size:.79rem;color:var(--tx2)">${r.correct}/${r.total} (${p}%)</span></div>
+      <div class="pb"><div class="pf ${cls}" style="width:${p}%"></div></div>
+    </div>`;
+  });
+
+  // Wrong answers
+  const wrongCnt = document.getElementById('wrongCnt');
+  const wrongDiv = document.getElementById('resWrong');
+  wrongCnt.textContent = wrongQs.length + ' wrong';
+  wrongDiv.innerHTML = '';
+  if(wrongQs.length===0){
+    wrongDiv.innerHTML = '<div class="empty" style="padding:16px"><div class="eic">🏆</div>Perfect score on these questions!</div>';
+  } else {
+    wrongQs.slice(0,50).forEach(({q, chosen, shuffled})=>{
+      const chosenText = chosen===-1 ? 'Not answered' : q.choices[chosen];
+      const correctText = q.choices[q.answer];
+      wrongDiv.innerHTML += `<div class="rcard">
+        <div class="rcardh">${q.cat} · ${q.sub}</div>
+        <div class="rcardb">
+          <div class="rcardq">${escHtml(q.q)}</div>
+          <div class="rwans">❌ Your answer: ${escHtml(chosenText)}</div>
+          <div class="rcans">✅ Correct: ${escHtml(correctText)}</div>
+          <div class="rcexp">💡 ${escHtml(q.exp)}</div>
+        </div>
+      </div>`;
+    });
+    if(wrongQs.length>50) wrongDiv.innerHTML += `<p style="text-align:center;color:var(--txm);font-size:.8rem;padding:8px">${wrongQs.length-50} more wrong answers not shown</p>`;
+  }
+
+  // Flagged
+  const flagSec = document.getElementById('resFlagSec');
+  if(flaggedQs.length>0){
+    flagSec.classList.remove('hn');
+    const flagDiv = document.getElementById('resFlags');
+    flagDiv.innerHTML = '';
+    flaggedQs.forEach(({q,chosen})=>{
+      const isCorrect = chosen===q.answer;
+      const chosenText = chosen===-1?'Not answered':q.choices[chosen];
+      flagDiv.innerHTML += `<div class="rcard">
+        <div class="rcardh">${q.cat} · ${isCorrect?'✅ Correct':'❌ Wrong'}</div>
+        <div class="rcardb">
+          <div class="rcardq">${escHtml(q.q)}</div>
+          <div class="${isCorrect?'rcans':'rwans'}">${isCorrect?'✅':'❌'} Your answer: ${escHtml(chosenText)}</div>
+          ${!isCorrect?`<div class="rcans">✅ Correct: ${escHtml(q.choices[q.answer])}</div>`:''}
+          <div class="rcexp">💡 ${escHtml(q.exp)}</div>
+        </div>
+      </div>`;
+    });
+  } else {
+    flagSec.classList.add('hn');
+  }
+}
+
+function retryWrong(){
+  if(!state.resultData || !state.resultData.wrongQs.length){
+    alert('No wrong answers to retry!'); return;
+  }
+  const wrongIds = new Set(state.resultData.wrongQs.map(({q})=>q.id));
+  const pool = QUESTIONS.filter(q=>wrongIds.has(q.id));
+  startQuizWithPool(pool, 'Retry Wrong Answers');
+}
+
+function startQuizWithPool(pool, label){
+  state.mode = 'missed';
+  state.questions = shuffle(pool);
+  state.answers = new Array(pool.length).fill(-1);
+  state.shuffled = pool.map(()=>[0,1,2,3].sort(()=>Math.random()-.5));
+  state.flagged = new Set();
+  state.currentIdx = 0;
+  state.submitted = false;
+  state.noBack = false;
+  state.resultData = null;
+  stopTimer();
+  document.getElementById('qTimer').classList.add('hn');
+  document.getElementById('qModeLabel').textContent = label;
+  document.getElementById('prevBtn').style.display = '';
+  nav('quizScreen', null);
+  document.querySelectorAll('.ni').forEach(n=>n.classList.remove('act'));
+  renderQuestion();
+}
+
+// ---- Home ----
+function renderHome(){
+  const hist = getHistory();
+  const cats = getCatStats();
+  const missed = getMissed();
+
+  // Badges
+  document.getElementById('quizBadge').textContent = hist.length + ' Quiz' + (hist.length!==1?'es':'');
+  const mb = document.getElementById('missedBadge');
+  mb.innerHTML = missed.length ? `<span class="badge bgr">${missed.length} Missed</span>` : '';
+  document.getElementById('missedCountHome').textContent = missed.length + ' question' + (missed.length!==1?'s':'') + ' in retry deck';
+
+  // Readiness
+  const totalAttempted = Object.values(cats).reduce((a,c)=>a+c.total,0);
+  let readiness = null;
+  if(totalAttempted>=10){
+    const totalCorrect = Object.values(cats).reduce((a,c)=>a+c.correct,0);
+    readiness = Math.round(totalCorrect/totalAttempted*100);
+  }
+  const pctEl = document.getElementById('readPct');
+  const arc = document.getElementById('readArc');
+  const circ = 251;
+  if(readiness!==null){
+    pctEl.textContent = readiness + '%';
+    arc.style.stroke = readiness>=80?'var(--gr)':readiness>=60?'var(--yl)':'var(--rd)';
+    arc.style.strokeDashoffset = circ - (circ * readiness/100);
+  } else {
+    pctEl.textContent = '—';
+    arc.style.strokeDashoffset = circ;
+  }
+
+  // Category performance
+  const catDiv = document.getElementById('catPerf');
+  const hasCatData = Object.keys(cats).length > 0;
+  if(!hasCatData){
+    catDiv.innerHTML = '<div class="empty" style="padding:14px"><div class="eic">📊</div>Complete a quiz to see performance</div>';
+  } else {
+    catDiv.innerHTML = '';
+    CATS.forEach(cat=>{
+      const r = cats[cat];
+      if(!r||!r.total) return;
+      const p = Math.round(r.correct/r.total*100);
+      const cls = p>=80?'pfg':p>=60?'pfy':'pfr';
+      catDiv.innerHTML += `<div class="crow">
+        <div class="crh"><span style="font-weight:600;font-size:.83rem">${cat}</span><span style="font-size:.79rem;color:var(--tx2)">${r.correct}/${r.total} (${p}%)</span></div>
+        <div class="pb"><div class="pf ${cls}" style="width:${p}%"></div></div>
+      </div>`;
+    });
+  }
+
+  // Recent quizzes
+  const recentDiv = document.getElementById('recentQ');
+  if(!hist.length){
+    recentDiv.innerHTML = '<div class="empty" style="padding:14px"><div class="eic">📝</div>No quizzes taken yet</div>';
+  } else {
+    recentDiv.innerHTML = '';
+    hist.slice(0,5).forEach(h=>{
+      const modeNames = {quick:'Quick Quiz',practice:'Practice Quiz',full:'Full Practice Test',missed:'Missed Questions'};
+      const cls = h.pct>=70?'bgg':h.pct>=50?'bgy':'bgr';
+      const passTag = h.pass!==null ? (h.pass?'<span class="badge bgg">PASS</span>':'<span class="badge bgr">FAIL</span>') : '';
+      recentDiv.innerHTML += `<div class="hrow">
+        <div><div style="font-size:.85rem;font-weight:600">${modeNames[h.mode]||h.mode}</div><div style="font-size:.72rem;color:var(--txm)">${h.date}</div></div>
+        <div style="display:flex;align-items:center;gap:6px">
+          ${passTag}
+          <span class="badge ${cls}" style="font-size:.85rem;font-weight:800">${h.pct}%</span>
+          <span style="font-size:.75rem;color:var(--tx2)">${h.correct}/${h.total}</span>
+        </div>
+      </div>`;
+    });
+  }
+}
+
+// ---- History ----
+function renderHistory(){
+  const hist = getHistory();
+  const listDiv = document.getElementById('histList');
+  if(!hist.length){
+    listDiv.innerHTML = '<div class="empty"><div class="eic">📊</div>No quiz history yet</div>';
+    return;
+  }
+  const modeNames = {quick:'Quick Quiz',practice:'Practice Quiz',full:'Full Practice Test',missed:'Missed Questions'};
+  listDiv.innerHTML = hist.map(h=>{
+    const cls = h.pct>=70?'bgg':h.pct>=50?'bgy':'bgr';
+    const passTag = h.pass!==null ? (h.pass?'<span class="badge bgg">PASS</span>':'<span class="badge bgr">FAIL</span>') : '';
+    return `<div class="hrow">
+      <div><div style="font-size:.85rem;font-weight:600">${modeNames[h.mode]||h.mode}</div><div style="font-size:.72rem;color:var(--txm)">${h.date}</div></div>
+      <div style="display:flex;align-items:center;gap:6px">
+        ${passTag}
+        <span class="badge ${cls}" style="font-size:.85rem;font-weight:800">${h.pct}%</span>
+        <span style="font-size:.75rem;color:var(--tx2)">${h.correct}/${h.total}</span>
+      </div>
+    </div>`;
+  }).join('');
+}
+function clearHistory(){
+  showConfirm('Clear History','Delete all quiz history records?', ()=>{
+    saveHistory([]);
+    renderHistory();
+    renderHome();
+  });
+}
+
+// ---- Study Mode ----
+let studyFilter = 'All';
+function renderStudy(){
+  const search = (document.getElementById('studySearch')||{value:''}).value.toLowerCase();
+  let pool = QUESTIONS.slice();
+
+  // Filters
+  const filtersDiv = document.getElementById('studyFilters');
+  const allFilters = ['All',...CATS];
+  filtersDiv.innerHTML = allFilters.map(f=>`<div class="fchip${f===studyFilter?' act':''}" onclick="setStudyFilter('${f}')">${f==='All'?'All ('+QUESTIONS.length+')':f.split(' ').slice(-1)[0]}</div>`).join('');
+
+  if(studyFilter !== 'All') pool = pool.filter(q=>q.cat===studyFilter);
+  if(search) pool = pool.filter(q=>q.q.toLowerCase().includes(search)||q.choices.some(c=>c.toLowerCase().includes(search)));
+
+  document.getElementById('studyCnt').textContent = pool.length + ' question' + (pool.length!==1?'s':'');
+
+  const listDiv = document.getElementById('studyList');
+  if(!pool.length){
+    listDiv.innerHTML = '<div class="empty"><div class="eic">🔍</div>No questions match your search</div>';
+    return;
+  }
+
+  listDiv.innerHTML = pool.map((q,i)=>`
+    <div class="stcard">
+      <div class="stch" onclick="toggleStudyCard(this)">
+        <div>
+          <div style="display:flex;gap:5px;margin-bottom:4px;flex-wrap:wrap">
+            <span class="badge ${CAT_COLORS[CATS.indexOf(q.cat)]||'bgb'}" style="font-size:.64rem">${q.cat.split(' ').slice(-1)[0]}</span>
+            <span class="badge bgp" style="font-size:.64rem">${q.sub}</span>
+          </div>
+          <div class="stcq">${escHtml(q.q)}</div>
+        </div>
+        <div style="color:var(--txm);flex-shrink:0;margin-top:2px">▾</div>
+      </div>
+      <div class="stcb">
+        <div class="stcc">
+          ${q.choices.map((c,ci)=>`<div class="stci${ci===q.answer?' ca':''}">${LETTERS[ci]}. ${escHtml(c)}</div>`).join('')}
+        </div>
+        <div style="margin-top:10px;padding:8px 10px;border-radius:6px;background:rgba(14,165,233,.07);border-left:2px solid var(--ac);font-size:.79rem;color:var(--tx2);line-height:1.6">
+          💡 ${escHtml(q.exp)}
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+function setStudyFilter(f){
+  studyFilter = f;
+  renderStudy();
+}
+
+function toggleStudyCard(hdrEl){
+  const body = hdrEl.nextElementSibling;
+  const arrow = hdrEl.querySelector('div:last-child');
+  body.classList.toggle('open');
+  if(arrow) arrow.textContent = body.classList.contains('open') ? '▴' : '▾';
+}
+
+// ---- Confetti ----
+function launchConfetti(){
+  const colors = ['#0ea5e9','#10b981','#f59e0b','#8b5cf6','#ef4444','#14b8a6'];
+  for(let i=0;i<80;i++){
+    const el = document.createElement('div');
+    el.className = 'cp';
+    el.style.left = Math.random()*100+'vw';
+    el.style.background = colors[Math.floor(Math.random()*colors.length)];
+    el.style.animationDuration = (2+Math.random()*3)+'s';
+    el.style.animationDelay = Math.random()*2+'s';
+    el.style.width = (6+Math.random()*8)+'px';
+    el.style.height = (6+Math.random()*8)+'px';
+    document.body.appendChild(el);
+    setTimeout(()=>el.remove(), 6000);
+  }
+}
+
+// ---- Utilities ----
+function escHtml(s){
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+</script>
+</body>
+</html>
